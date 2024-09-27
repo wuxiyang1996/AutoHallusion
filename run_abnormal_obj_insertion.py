@@ -1,14 +1,14 @@
-from main_exi_exp_merge_reuse_ablation_removal import run_exp
+from main_exi_exp_merge_reuse_ablation import run_exp
 import argparse
 
 # Create the parser
 parser = argparse.ArgumentParser(description="Run the experimental setup for Claude.")
 
 # Experiment tag to store data
-parser.add_argument('-t', '--exp_tag', type=str, required=False, default='real_reuse', help='Experiment tag to uniquely identify the setup. Default is "base".')
+parser.add_argument('-t', '--exp_tag', type=str, required=False, default='abnormal_obj_insertion', help='Experiment tag to uniquely identify the setup. Default is "base".')
 # Parse arguments from the command line
 # Determine if reuse the dataset stored previously
-parser.add_argument('--reuse_scene', action='store_true', default=True,
+parser.add_argument('--reuse_scene', action='store_true', default=False,
                     help='Flag to indicate if scenes should be reused. No argument needed, presence of flag sets it to True.')
 # The path to store the dataset
 parser.add_argument('--dataset_dir', type=str, default="./datasets/coco_dataset", help='dataset dir')
@@ -19,19 +19,25 @@ parser.add_argument('--img_caption_model_type', type=str, choices=['gemini', 'cl
 
 args_cmd = parser.parse_args()
 
+print('debug...reuse_scene is {}'.format(args_cmd.reuse_scene))
 
 args = {
     "exp_tag": args_cmd.exp_tag, # Experiment tag to store data
     # Folder to store the experiment data and logs
-    "exp_dir": "./exp_merge_removal_{}_{}_{}_r-scene-{}".format(args_cmd.obj_think_model_type, args_cmd.img_caption_model_type, args_cmd.exp_tag, args_cmd.reuse_scene),
+    "exp_dir": "./exp_merge_base_{}_{}_{}_r-scene-{}".format(args_cmd.obj_think_model_type, args_cmd.img_caption_model_type, args_cmd.exp_tag, args_cmd.reuse_scene),
     "total": 200, # Number of data generated
-    "diffusion": False, # Object size (Abnormal / Paired Object Insertion)
-    "scene_constrain": None, # Add constraints on the scene themes
-    "new_scene_img": True, # Flag of generating new images (synthetic image settng)
+    "object_size": (200, 200), # Object size (Abnormal / Paired Object Insertion)
     "obj_count": 5, # Number of correlated objects generation within the scene image
-    "list_obj_count": 5, # Number of object to be detected from the given image
-    "new_removal_obj": True, # Determine if choose a new object to remove
-    "max_attempt": 5, # Attempt number to remove objects from the scene
+    "diffusion": False, # Diffusion model usage flag for object insertion, leaving for further implementation
+
+    # Ablation study: Object-Scene Alignment (for Abnormal Object Insertion)
+    # Initial: Intentionally choose abnormal object to insert into the scene
+    "random": False, # Using random object to insert
+    "scene_ramdom": False, # Randomly shuffle the scene images
+    "same": False, # Using objects within the same context to insert
+
+    "scene_constrain": None, # Add constraints on the scene themes
+    "irrelevant_obj_category": None, # Add cnstraints on the object to be inserted
 
     # Reuse dataset flags
     "dataset_dir": args_cmd.dataset_dir, # Path to load the dataset
@@ -41,14 +47,15 @@ args = {
 
     # hsy 2024.05.20 
     "reuse_scene": args_cmd.reuse_scene, # Determine if using the existing scene images from the dataset
-    "reuse_obj_removal": True, # Determine if removing the same object
+    "reuse_scene_obj_align": False, # Decide if using the previous obj-scene alignment results or re-do alignment
+    "reuse_obj": True, # Determine if using the existing object images from the dataset
+    "reuse_obj_partial_random": False, # Shuffle the object image under the same image
+    "reuse_obj_complete_random": False, # Decide if using the previous obj-scene alignment results or randomly assign
     "resize_img": True, # Resize the input image to 1024 * 1024
 
     "obj_think_model_type": args_cmd.obj_think_model_type, # Model type to retrieve the object
     "img_caption_model_type": args_cmd.img_caption_model_type, # Model type to caption the image
 }
-
-print('debug...reuse_scene is {}'.format(args_cmd.reuse_scene))
 
 # Path to store generated images
 args["exp_name"] = "exi_exp_{}".format(args["exp_tag"])

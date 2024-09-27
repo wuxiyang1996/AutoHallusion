@@ -1,11 +1,11 @@
-from main_exi_exp_merge_reuse_ablation import run_exp
+from main_exi_exp_merge_reuse_correlation import run_exp
 import argparse
 
 # Create the parser
 parser = argparse.ArgumentParser(description="Run the experimental setup for Claude.")
 
 # Experiment tag to store data
-parser.add_argument('-t', '--exp_tag', type=str, required=False, default='real_reuse', help='Experiment tag to uniquely identify the setup. Default is "base".')
+parser.add_argument('-t', '--exp_tag', type=str, required=False, default='paired_obj_insertion', help='Experiment tag to uniquely identify the setup. Default is "base".')
 # Parse arguments from the command line
 # Determine if reuse the dataset stored previously
 parser.add_argument('--reuse_scene', action='store_true', default=False,
@@ -13,9 +13,9 @@ parser.add_argument('--reuse_scene', action='store_true', default=False,
 # The path to store the dataset
 parser.add_argument('--dataset_dir', type=str, default="./datasets/coco_dataset", help='dataset dir')
 # The model used to retrieve the objects
-parser.add_argument('--obj_think_model_type', type=str, choices=['gemini', 'claude', 'gpt4v', 'llava', 'minigpt4'], default='gpt4v', help='Specify the model type.')
+parser.add_argument('--obj_think_model_type', type=str, choices=['gemini', 'claude', 'gpt4v', 'llava', 'minigpt4'], default='claude', help='Specify the model type.')
 # The model used to generate the image captions
-parser.add_argument('--img_caption_model_type', type=str, choices=['gemini', 'claude', 'gpt4v', 'llava', 'minigpt4'], default='gpt4v', help='Specify the model type.')
+parser.add_argument('--img_caption_model_type', type=str, choices=['gemini', 'claude', 'gpt4v', 'llava', 'minigpt4'], default='claude', help='Specify the model type.')
 
 args_cmd = parser.parse_args()
 
@@ -48,9 +48,7 @@ args = {
     # hsy 2024.05.20 
     "reuse_scene": args_cmd.reuse_scene, # Determine if using the existing scene images from the dataset
     "reuse_scene_obj_align": False, # Decide if using the previous obj-scene alignment results or re-do alignment
-    "reuse_obj": True, # Determine if using the existing object images from the dataset
-    "reuse_obj_partial_random": False, # Shuffle the object image under the same image
-    "reuse_obj_complete_random": False, # Decide if using the previous obj-scene alignment results or randomly assign
+     "reuse_obj": False, # hsy 2024.06.01 when reuse_scene is False, then reuse_obj should also be false
     "resize_img": True, # Resize the input image to 1024 * 1024
 
     "obj_think_model_type": args_cmd.obj_think_model_type, # Model type to retrieve the object
