@@ -1,4 +1,4 @@
-from main_exi_exp_merge_reuse_ablation_removal import run_exp
+from main_correlated_obj_removal import run_exp
 import argparse
 
 # Create the parser

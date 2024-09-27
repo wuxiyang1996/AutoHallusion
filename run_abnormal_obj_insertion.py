@@ -1,4 +1,4 @@
-from main_exi_exp_merge_reuse_ablation import run_exp
+from main_abnormal_obj_insertion import run_exp
 import argparse
 
 # Create the parser

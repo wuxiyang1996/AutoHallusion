@@ -1,4 +1,4 @@
-from main_exi_exp_merge_reuse_correlation import run_exp
+from main_paired_obj_insertion import run_exp
 import argparse
 
 # Create the parser
