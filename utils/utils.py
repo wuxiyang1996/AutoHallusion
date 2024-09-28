@@ -642,7 +642,7 @@ def create_mask_from_png(input_img):
 def object_stitch(init_img_path, obj_img_path, obj_mask_path, out_image_name, new_bbox):
     img_size = (new_bbox[3] - new_bbox[1], new_bbox[2] - new_bbox[0])
 
-    init_img = Image.open(init_img_path)
+    init_img = Image.open(init_img_path).convert('RGBA')
     obj_img = Image.open(obj_img_path)
     obj_mask = Image.open(obj_mask_path)
 
@@ -826,9 +826,7 @@ def Addition_Image_Operation_VD_stitch(init_img_path, existing_bbox, add_object,
         obj_mask_img = Image.fromarray(obj_mask_img.astype(np.uint8))
         obj_mask_img.save(obj_mask_path)
 
-    # out_img = object_stitch(init_img_path, output_path, obj_mask_path, out_image_name, new_bbox)
     out_img = object_stitch(init_img_path, input_path, obj_mask_path, out_image_name, new_bbox)
-    # return out_img, new_bbox, irrelevant_obj_attribute
     return out_img, new_bbox, {}
 
 # Generate the image with the correlated object pair
