@@ -19,7 +19,7 @@ parser.add_argument('--img_caption_model_type', type=str, choices=['gemini', 'cl
 
 args_cmd = parser.parse_args()
 
-print('debug...reuse_scene is {}'.format(args_cmd.reuse_scene))
+print('debug...use_dataset is {}'.format(args_cmd.use_dataset))
 
 args = {
     "exp_tag": args_cmd.exp_tag, # Experiment tag to store data
