@@ -43,7 +43,7 @@ If you find our paper useful, please cite our paper:
 
 ## Usage
 
-## Leaderboard
+## Metric Leaderboard
 
 ## License
 This repository is under [BSD 3-Clause License](LICENSE.md). 

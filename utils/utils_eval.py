@@ -105,26 +105,7 @@ def evaluate_if_given_within(reference, generated):
 
 # Evaluation function, only detect if the object exists in this given image
 # vqa_model_func should implement vqa_gpt4v/gemini/claude
-def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_caption, vqa_model_func, logger, debug=False):
-    # vqa_model_func = None
-    # assert (pred_model_name in ['gpt4v, gemini, claude'])
-    # if pred_model_name == 'gpt4v':
-    #     from utils import vqa_gpt4v
-    #     vqa_model_func = vqa_gpt4v
-    #     print('verbose...select vqa_gpt4v for prediction')
-
-    # elif pred_model_name == 'gemini':
-    #     from utils_gemini_clean import vqa_gemini
-    #     vqa_model_func = vqa_gemini
-    #     print('verbose...select vqa_gemini for prediction')
-
-    # elif pred_model_name == 'claude':
-    #     raise NotImplementedError()
-    #     print('verbose...select vqa_claude for prediction')
-
-    # else:
-    #     raise NotImplementedError()
-
+def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_caption, vqa_model_func, logger, debug=False, notebook_print=False):
     # background = ground_truth["background"]
     # scene_name = ground_truth["scene"]
     obj_name = ground_truth["object_name"]
@@ -153,6 +134,11 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
     # Determine if the added adversarial object exists
     logger.warning("######")
     logger.warning("[ATTACK] Adding new irrelevant object '{}' -- existence".format(irrelevant_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Adding new irrelevant object '{}' -- existence".format(irrelevant_object_name))
+
     question = "Is there a {} in this image?".format(irrelevant_object_name)
     #pred_answer = vqa_gpt4v(result_img_path, question)
     pred_answer = vqa_model_func(result_img_path, question)
@@ -170,6 +156,13 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Obj] {}".format(irrelevant_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     # print("Object: ", irrelevant_object_name, ", Question: ", question)
     # print("Answer: ", pred_answer, "Eval Result: ", eval_result)
     if eval_result == "0":
@@ -179,8 +172,12 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
             case_result["irr_obj_correct_stitch1"] = True
 
         logger.warning("[Attack Success] Added irrelevant object not detected.")
+        if notebook_print:
+            print("[Attack Success] Added irrelevant object not detected.")
     else:
         logger.warning("[Attack Failed] Added irrelevant object detected.")
+        if notebook_print:
+            print("[Attack Failed] Added irrelevant object detected.")
 
     ########## Existence Detection: Added, Irrelevant Object, with caption ###########
 
@@ -188,6 +185,12 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
     logger.warning("######")
     logger.warning("[ATTACK] Adding new irrelevant object '{}' with image-level caption -- existence".format(
         irrelevant_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Adding new irrelevant object '{}' with image-level caption -- existence".format(
+            irrelevant_object_name))
+
     question = "We have an image depicting {}. Is there a {} in this image?".format(result_caption,
                                                                                     irrelevant_object_name)
     #pred_answer2 = vqa_gpt4v(result_img_path, question)
@@ -202,6 +205,13 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Obj] {}".format(irrelevant_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer2))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     # print("Object: ", irrelevant_object_name, ", Question: ", question)
     # print("Answer: ", pred_answer2, "Eval Result: ", eval_result)
     if eval_result == "0":
@@ -212,8 +222,15 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
 
         logger.warning(
             "[Attack Success] Added irrelevant object not detected, with image-level caption in the question.")
+
+        if notebook_print:
+            print("[Attack Success] Added irrelevant object not detected, with image-level caption in the question.")
+
     else:
         logger.warning("[Attack Failed] Added irrelevant object detected, with image-level caption in the question.")
+        if notebook_print:
+            print(
+                "[Attack Failed] Added irrelevant object detected, with image-level caption in the question.")
 
     ########## Existence Detection: irrelevant obj conflict ###########
     eval_result = evaluate_by_chatgpt_quick_test("Is there a {} in this image?".format(irrelevant_object_name),
@@ -227,8 +244,13 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
             case_result["irr_obj_response_conflict"] = True
 
         logger.warning("[Attack Success] Added irrelevant object inconsistent.")
+        if notebook_print:
+            print("[Attack Success] Added irrelevant object inconsistent.")
     else:
         logger.warning("[Attack Failed] Added irrelevant object consistent")
+        if notebook_print:
+            print("[Attack Failed] Added irrelevant object consistent")
+
 
     ########## Existence Detection: irrelevant obj local global conflict ###########
 
@@ -243,8 +265,12 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
             case_result["irr_obj_local_global_conflict1"] = True
 
         logger.warning("[Attack Success] Added irrelevant object local global inconsistent.")
+        if notebook_print:
+            print("[Attack Success] Added irrelevant object local global inconsistent.")
     else:
         logger.warning("[Attack Failed] Added irrelevant object local global consistent")
+        if notebook_print:
+            print("[Attack Failed] Added irrelevant object local global consistent")
 
     eval_result = evaluate_by_chatgpt_quick_test("Is there a {} in this image?".format(irrelevant_object_name),
                                                  pred_answer2,
@@ -256,18 +282,29 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
         if debug:
             case_result["irr_obj_local_global_conflict2"] = True
         logger.warning("[Attack Success] Added irrelevant object local global inconsistent.")
+        if notebook_print:
+            print("[Attack Success] Added irrelevant object local global inconsistent.")
     else:
         logger.warning("[Attack Failed] Added irrelevant object local global consistent")
+        if notebook_print:
+            print("[Attack Failed] Added irrelevant object local global consistent")
 
     ########## Existence Detection: other objects, in caption but not in detection ###########
     logger.warning("######")
     logger.warning("[ATTACK] image-level caption conflict with objects -- existence")
+    if notebook_print:
+        print("######")
+        print("[ATTACK] image-level caption conflict with objects -- existence")
 
     caption_obj_lst = extract_obj_from_caption(result_caption)
     logger.warning(
         "[Target Model Generated] objects described in the generated caption: {}".format(",".join(caption_obj_lst)))
     det_obj_lst = obj_name + [irrelevant_object_name]
     non_exist = []
+
+    if notebook_print:
+        print(
+            "[Target Model Generated] objects described in the generated caption: {}".format(",".join(caption_obj_lst)))
 
     for i in range(len(caption_obj_lst)):
         if evaluate_if_given_within(det_obj_lst, caption_obj_lst[i]) == "0":
@@ -276,8 +313,16 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
         "[Detection Model] objects described in the image-level caption, but not detected by the detection model: {}".format(
             ",".join(caption_obj_lst)))
 
+    if notebook_print:
+        print(
+            "[Detection Model] objects described in the image-level caption, but not detected by the detection model: {}".format(
+                ",".join(caption_obj_lst)))
+
     for i in range(len(non_exist)):
         logger.warning("*****")
+        if notebook_print:
+            print("*****")
+
         question = "Is there a {} in this image?".format(non_exist[i])
         #pred_answer = vqa_gpt4v(result_img_path, question)
         pred_answer = vqa_model_func(result_img_path, question)
@@ -292,6 +337,13 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
         logger.warning("[GT] {}".format(result_caption))
         logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+        if notebook_print:
+            print("[Obj] {}".format(non_exist[i]))
+            print("[Q] {}".format(question))
+            print("[Pred] {}".format(pred_answer))
+            print("[GT] {}".format(result_caption))
+            print("[Eval (same or not)] {}".format(eval_result))
+
         if eval_result == "0":
             success = True
 
@@ -299,8 +351,15 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
                 case_result["other_obj"] = True
             logger.warning("[Attack Success] {} not detected, but it is mentioned in the image-level caption.".format(
                 non_exist[i]))
+
+            if notebook_print:
+                print("[Attack Success] {} not detected, but it is mentioned in the image-level caption.".format(
+                non_exist[i]))
+
         else:
             logger.warning("[Attack Failed] {} mentioned in the image-level caption exists.".format(non_exist[i]))
+            if notebook_print:
+                print("[Attack Failed] {} mentioned in the image-level caption exists.".format(non_exist[i]))
 
     ########## Existence Detection (other): relevant Objects ###########
 
@@ -338,8 +397,7 @@ def evaluation_existence_given_pred_model(result_img_path, ground_truth, result_
 # Results are compared with the prediction and the queried ground truth.
 # Current version only consider 1 attack object
 # vqa_model_func for gpt4v/gemini/claude
-
-def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False):
+def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False, notebook_print=False):
     scene_name = ground_truth["scene"]
     # background = ground_truth["background"]
     obj_name = ground_truth["object_name"]
@@ -376,6 +434,12 @@ def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, v
         logger.warning("######")
         logger.warning("[ATTACK] Determine spatial relation between the irrelevant object '{}' and the existing object: {}".format(
             irrelevant_object_name, existing_obj))
+
+        if notebook_print:
+            print("######")
+            print(
+                "[ATTACK] Determine spatial relation between the irrelevant object '{}' and the existing object: {}".format(
+                    irrelevant_object_name, existing_obj))
 
         if debug:
             case_result["irr_obj_spatial_correct_stitch"].append(list())
@@ -414,17 +478,33 @@ def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, v
             logger.warning("[GT] {}".format(queried_info + supplement))
             logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+            if notebook_print:
+                print("[Obj] {}".format(irrelevant_object_name))
+                print("[Q] {}".format(question + supplement))
+                print("[Pred] {}".format(pred_answer))
+                print("[GT] {}".format(queried_info + supplement))
+                print("[Eval (same or not)] {}".format(eval_result))
+
             if eval_result == "0":
                 success = True
                 if debug:
                     case_result["irr_obj_spatial_correct_stitch"][-1].append(str(True))
                 logger.warning(
                     "[Attack Success] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) is not correct.".format(existing_obj, str(spatial_distance_rank + 1)))
+                if notebook_print:
+                    print(
+                        "[Attack Success] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) is not correct.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
+
             else:
                 if debug:
                     case_result["irr_obj_spatial_correct_stitch"][-1].append(str(False))
                 logger.warning(
                     "[Attack Failed] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) is correct.".format(existing_obj, str(spatial_distance_rank + 1)))
+                if notebook_print:
+                    print(
+                        "[Attack Failed] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) is correct.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
 
 
             question = "Is the object({}) {} a/an {} in this image, given their center positions?".format(irrelevant_object_description, spatial_flag, existing_obj)
@@ -445,17 +525,36 @@ def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, v
             logger.warning("[GT] {}".format(queried_info + supplement))
             logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+            if notebook_print:
+                print("[Obj] {}".format(irrelevant_object_description))
+                print("[Q] {}".format(question + supplement))
+                print("[Pred] {}".format(pred_answer))
+                print("[GT] {}".format(queried_info + supplement))
+                print("[Eval (same or not)] {}".format(eval_result))
+
+
             if eval_result == "0":
                 success = True
                 if debug:
                     case_result["irr_obj_spatial_response_conflict"][-1].append(str(True))
                 logger.warning(
                     "[Attack Success] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) has conflict.".format(existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Success] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) has conflict.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
+
             else:
                 if debug:
                     case_result["irr_obj_spatial_response_conflict"][-1].append(str(False))
                 logger.warning(
                     "[Attack Failed] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) has no conflict.".format(existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Failed] The spatial relation between the added irrelevant object and the existing object {} (#{} closest) has no conflict.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
 
         if debug:
             case_result["irr_obj_spatial_correct_stitch"][-1] = ",".join(case_result["irr_obj_spatial_correct_stitch"][-1])
@@ -476,7 +575,7 @@ def evaluation_spatial_relation_give_pred_model(result_img_path, ground_truth, v
 # Evaluation function, only detect if the object exists in this given image
 # For the object removal task
 def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False,
-                                       object_wise=False):
+                                       object_wise=False, notebook_print=False):
     # background = ground_truth["background"]
     # scene_name = ground_truth["scene"]
     obj_name = ground_truth["object_name"]
@@ -505,6 +604,11 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     # Determine if the added adversarial object exists
     logger.warning("######")
     logger.warning("[ATTACK] Remove an existing object '{}' -- existence".format(target_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Remove an existing object '{}' -- existence".format(target_object_name))
+
     question = "Is there a/an {} in this image?".format(target_object_name)
     pred_answer_simple = vqa_model_func(result_img_path, question)
 
@@ -517,6 +621,13 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Removed Obj] {}".format(target_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_simple))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -524,8 +635,13 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
             case_result["target_obj_correct_simple"] = True
 
         logger.warning("[Attack Success] Removed object mistakenly detected.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object mistakenly detected.")
     else:
         logger.warning("[Attack Failed] Removed object not detected.")
+        if notebook_print:
+            print("[Attack Failed] Removed object not detected.")
 
     ########## Existence Detection: Remove Object, with object-level caption ###########
 
@@ -533,6 +649,12 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("######")
     logger.warning("[ATTACK] Remove an existing object '{}' with object-level caption -- existence".format(
         target_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Remove an existing object '{}' with object-level caption -- existence".format(
+            target_object_name))
+
     question = "Is there a/an {} in this image? This object is {}".format(target_object_name, target_object_description)
     pred_answer_desc = vqa_model_func(result_img_path, question)
 
@@ -543,6 +665,13 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Removed Obj] {}".format(target_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_desc))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -551,8 +680,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object mistakenly detected, with object-level caption in the question.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Removed object mistakenly detected, with object-level caption in the question.")
+
     else:
         logger.warning("[Attack Failed] Removed object not detected, with object-level caption in the question.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object not detected, with object-level caption in the question.")
 
     ########## Existence Detection: Remove Object, with other existing object captions ###########
 
@@ -560,6 +697,11 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("######")
     logger.warning("[ATTACK] Remove an existing object '{}' with other existing object captions -- existence".format(
         target_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Remove an existing object '{}' with other existing object captions -- existence".format(
+                target_object_name))
 
     other_obj_info = ""
     for i in range(len(object_description)):
@@ -576,6 +718,13 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Removed Obj] {}".format(target_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_concat))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -584,9 +733,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object mistakenly detected, with other existing object captions in the question.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Removed object mistakenly detected, with other existing object captions in the question.")
     else:
         logger.warning(
             "[Attack Failed] Removed object not detected, with other existing object captions in the question.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object not detected, with other existing object captions in the question.")
 
     ########## Existence Detection: Remove Object, with image-level captions ###########
 
@@ -594,6 +750,11 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("######")
     logger.warning("[ATTACK] Remove an existing object '{}' with image-level captions -- existence".format(
         target_object_name))
+
+    if notebook_print:
+        print("######")
+        print("[ATTACK] Remove an existing object '{}' with image-level captions -- existence".format(
+            target_object_name))
 
     other_obj_info = ""
     for i in range(len(object_description)):
@@ -609,6 +770,13 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Removed Obj] {}".format(target_object_name))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_caption))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -617,8 +785,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object mistakenly detected, with image-level captions in the question.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Removed object mistakenly detected, with image-level captions in the question.")
+
     else:
         logger.warning("[Attack Failed] Removed object not detected, with image-level captions in the question.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object not detected, with image-level captions in the question.")
 
     ########## Existence Detection: Remove obj conflict, simple vs. object-level ###########
 
@@ -634,9 +810,18 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with and without object-level caption.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Removed object inconsistent between responses with and without object-level caption.")
+
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with and without object-level caption.")
+
+        if notebook_print:
+            print(
+                "[Attack Failed] Removed object consistent between responses with and without object-level caption.")
 
     ########## Existence Detection: Remove obj conflict, simple vs. other object captions ###########
 
@@ -652,9 +837,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with and without other object captions.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object inconsistent between responses with and without other object captions.")
+
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with and without other object captions.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object consistent between responses with and without other object captions.")
 
     ########## Existence Detection: Remove obj conflict, simple vs. image-level captions ###########
 
@@ -670,9 +862,14 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with and without image-level captions.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object inconsistent between responses with and without image-level captions.")
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with and without image-level captions.")
+        if notebook_print:
+            print("[Attack Failed] Removed object consistent between responses with and without image-level captions.")
 
     ########## Existence Detection: Remove obj conflict, object-level vs. other object captions ###########
 
@@ -688,9 +885,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with object-level and other object captions.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object inconsistent between responses with object-level and other object captions.")
+
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with object-level and other object captions.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object consistent between responses with object-level and other object captions.")
 
     ########## Existence Detection: Remove obj conflict, object-level vs. image-level captions ###########
 
@@ -706,9 +910,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with object-level and image-level captions.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object inconsistent between responses with object-level and image-level captions.")
+
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with object-level and image-level captions.")
+
+        if notebook_print:
+            print("[Attack Failed] Removed object consistent between responses with object-level and image-level captions.")
 
     ########## Existence Detection: Remove obj conflict, other object vs. image-level captions ###########
 
@@ -724,9 +935,15 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 
         logger.warning(
             "[Attack Success] Removed object inconsistent between responses with other object and image-level captions.")
+
+        if notebook_print:
+            print("[Attack Success] Removed object inconsistent between responses with other object and image-level captions.")
+
     else:
         logger.warning(
             "[Attack Failed] Removed object consistent between responses with other object and image-level captions.")
+        if notebook_print:
+            print("[Attack Failed] Removed object consistent between responses with other object and image-level captions.")
 
     ########## (Optional, For Case Study) Existence Detection: Remove object given the existence of other objects ###########
     if object_wise:
@@ -734,8 +951,16 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
         logger.warning(
             "[ATTACK] Remove an existing object '{}' given the existence of another object captions -- existence")
 
+        if notebook_print:
+            print("######")
+            print("[ATTACK] Remove an existing object '{}' given the existence of another object captions -- existence")
+
         for i in range(len(object_description)):
             logger.warning("*****")
+
+            if notebook_print:
+                print("*****")
+
             question = "We have an object ({}) in this image. Is there a/an {} in this image?".format(
                 object_description[i], target_object_name)
             pred_answer = vqa_model_func(result_img_path, question)
@@ -751,6 +976,14 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
             logger.warning("[GT] {}".format(queried_info))
             logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+            if notebook_print:
+                print("[Existing Obj] {}".format(obj_name[i]))
+                print("[Removed Obj] {}".format(target_object_name))
+                print("[Q] {}".format(question))
+                print("[Pred] {}".format(pred_answer))
+                print("[GT] {}".format(queried_info))
+                print("[Eval (same or not)] {}".format(eval_result))
+
             if eval_result == "0":
                 success = True
                 key_name = "target_obj_correct_other_obj_" + str(i)
@@ -761,10 +994,21 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
                 logger.warning(
                     "[Attack Success] Removed object mistakenly detected, with the existing object's caption ({}) in the question.".format(
                         obj_name[i]))
+
+                if notebook_print:
+                    print(
+                        "[Attack Success] Removed object mistakenly detected, with the existing object's caption ({}) in the question.".format(
+                            obj_name[i]))
+
             else:
                 logger.warning(
                     "[Attack Failed] Removed object not detected, with the existing object's caption ({}) in the question.".format(
                         obj_name[i]))
+
+                if notebook_print:
+                    print(
+                        "[Attack Failed] Removed object not detected, with the existing object's caption ({}) in the question.".format(
+                            obj_name[i]))
 
     if success:
         if debug:
@@ -785,7 +1029,7 @@ def evaluation_existence_removed_pred_model(result_img_path, ground_truth, vqa_m
 # Current version only consider 1 attack object
 # For object removal experiments
 def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False,
-                                              three_branch_analysis=False):
+                                              three_branch_analysis=False, notebook_print=False):
     scene_name = ground_truth["scene"]
     # background = ground_truth["background"]
     obj_name = ground_truth["object_name"]
@@ -824,6 +1068,12 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
             "[ATTACK] Determine spatial relation between the removed object '{}' and the existing object: {}. The model should insist no.".format(
                 target_object_name, existing_obj))
 
+        if notebook_print:
+            print("######")
+            print(
+                "[ATTACK] Determine spatial relation between the removed object '{}' and the existing object: {}. The model should insist no.".format(
+                    target_object_name, existing_obj))
+
         if debug:
             case_result["target_obj_spatial_correct_remove"].append(list())
             case_result["target_obj_spatial_response_conflict"].append(list())
@@ -840,6 +1090,11 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
             logger.warning(
                 "[ATTACK] No feasible spatial relation detected between the removed object '{}' and the existing object: {}.".format(
                     target_object_name, existing_obj))
+
+            if notebook_print:
+                print(
+                    "[ATTACK] No feasible spatial relation detected between the removed object '{}' and the existing object: {}.".format(
+                        target_object_name, existing_obj))
 
         for spatial_relation_curr_single in spatial_relation_curr:
             # spatial_flag = "uncertain"
@@ -878,8 +1133,18 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
             logger.warning("[GT] {}".format(existing_info + queried_info + supplement))
             logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+            if notebook_print:
+                print("[Obj] {}".format(target_object_name))
+                print("[Q] {}".format(question + supplement))
+                print("[Pred] {}".format(pred_answer))
+                print("[GT] {}".format(existing_info + queried_info + supplement))
+                print("[Eval (same or not)] {}".format(eval_result))
+
             if three_branch_analysis:
                 logger.warning("[Eval advanced (same or not)] {}".format(eval_result_adv))
+
+                if notebook_print:
+                    print("[Eval advanced (same or not)] {}".format(eval_result_adv))
 
             if eval_result == "0":
                 success = True
@@ -897,11 +1162,22 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
                 logger.warning(
                     "[Attack Success] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) is not correct.".format(
                         existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Success] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) is not correct.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
+
             else:
                 if debug:
                     case_result["target_obj_spatial_correct_remove"][-1].append(str(False))
                 logger.warning(
                     "[Attack Failed] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) is correct.".format(
+                        existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Failed] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) is correct.".format(
                         existing_obj, str(spatial_distance_rank + 1)))
 
             question = "Is the object({}) {} a/an {} in this image, given their center positions?".format(
@@ -927,8 +1203,18 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
             logger.warning("[GT] {}".format(existing_info + queried_info + supplement))
             logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+            if notebook_print:
+                print("[Obj] {}".format(target_object_description))
+                print("[Q] {}".format(question + supplement))
+                print("[Pred] {}".format(pred_answer))
+                print("[GT] {}".format(existing_info + queried_info + supplement))
+                print("[Eval (same or not)] {}".format(eval_result))
+
             if three_branch_analysis:
                 logger.warning("[Eval advanced (same or not)] {}".format(eval_result_adv))
+
+                if notebook_print:
+                    print("[Eval advanced (same or not)] {}".format(eval_result_adv))
 
             if eval_result == "0":
                 success = True
@@ -945,6 +1231,12 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
                 logger.warning(
                     "[Attack Success] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) has conflict.".format(
                         existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Success] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) has conflict.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
+
             else:
                 if debug:
                     case_result["target_obj_spatial_response_conflict"][-1].append(str(False))
@@ -952,6 +1244,11 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
                 logger.warning(
                     "[Attack Failed] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) has no conflict.".format(
                         existing_obj, str(spatial_distance_rank + 1)))
+
+                if notebook_print:
+                    print(
+                        "[Attack Failed] The spatial relation between the removed, non-existing object and the existing object {} (#{} closest) has no conflict.".format(
+                            existing_obj, str(spatial_distance_rank + 1)))
 
         if debug:
             case_result["target_obj_spatial_correct_remove"][-1] = ",".join(
@@ -978,7 +1275,7 @@ def evaluation_spatial_relation_removed_pred_model(result_img_path, ground_truth
 
 
 # Evaluation function, only detect if the object exists in this given image
-def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False):
+def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vqa_model_func, logger, debug=False, notebook_print=False):
     # background = ground_truth["background"]
     # scene_name = ground_truth["scene"]
     # obj_name = ground_truth["object_name"]
@@ -1006,6 +1303,13 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning(
         "[ATTACK] Asking about non-existing, correlated object '{}' only -- existence".format(
             disturbing_obj))
+
+    if notebook_print:
+        print("######")
+        print(
+            "[ATTACK] Asking about non-existing, correlated object '{}' only -- existence".format(
+                disturbing_obj))
+
     question = "Is there a/an {} in this image?".format(disturbing_obj)
     pred_answer_vanilla = vqa_model_func(result_img_path, question)
 
@@ -1018,6 +1322,14 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning("[Pred] {}".format(pred_answer_vanilla))
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
+
+    if notebook_print:
+        print("[Existing Obj] {}".format(irrelevant_object_name))
+        print("[Correlated Obj] {}".format(disturbing_obj))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_vanilla))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
 
     if eval_result == "0":
         success = True
@@ -1036,6 +1348,13 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning(
         "[ATTACK] Asking about non-existing, correlated object '{}' given existing object {} -- existence".format(
             disturbing_obj, irrelevant_object_name))
+
+    if notebook_print:
+        print("######")
+        print(
+            "[ATTACK] Asking about non-existing, correlated object '{}' given existing object {} -- existence".format(
+                disturbing_obj, irrelevant_object_name))
+
     question = "We have {} in this image. Is there a/an {} in this image as well?".format(irrelevant_object_name,
                                                                                           disturbing_obj)
     pred_answer_correlated = vqa_model_func(result_img_path, question)
@@ -1050,6 +1369,14 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Existing Obj] {}".format(irrelevant_object_name))
+        print("[Correlated Obj] {}".format(disturbing_obj))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_correlated))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -1057,8 +1384,15 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
             case_result["disturb_obj_not_detect_correlated"] = True
 
         logger.warning("[Attack Success] Non-existing correlated object mistakenly detected given existing object.")
+
+        if notebook_print:
+            print("[Attack Success] Non-existing correlated object mistakenly detected given existing object.")
+
     else:
         logger.warning("[Attack Failed] Non-existing correlated object not detected given existing object.")
+
+        if notebook_print:
+            print("[Attack Failed] Non-existing correlated object not detected given existing object.")
 
     ########## Correlated Object Existence Detection: Non-existing, correlated object, with caption ###########
 
@@ -1067,6 +1401,13 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning(
         "[ATTACK] Asking about non-existing, correlated object '{}' with image-level caption -- existence".format(
             disturbing_obj, irrelevant_object_name))
+
+    if notebook_print:
+        print("######")
+        print(
+            "[ATTACK] Asking about non-existing, correlated object '{}' with image-level caption -- existence".format(
+                disturbing_obj, irrelevant_object_name))
+
     question = "We have an image depicting {}. Is there a/an {} in this image as well?".format(
         result_caption, irrelevant_object_name, disturbing_obj)
     pred_answer_caption = vqa_model_func(result_img_path, question)
@@ -1079,6 +1420,14 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
     logger.warning("[GT] {}".format(queried_info))
     logger.warning("[Eval (same or not)] {}".format(eval_result))
 
+    if notebook_print:
+        print("[Existing Obj] {}".format(irrelevant_object_name))
+        print("[Correlated Obj] {}".format(disturbing_obj))
+        print("[Q] {}".format(question))
+        print("[Pred] {}".format(pred_answer_caption))
+        print("[GT] {}".format(queried_info))
+        print("[Eval (same or not)] {}".format(eval_result))
+
     if eval_result == "0":
         success = True
 
@@ -1087,9 +1436,18 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
 
         logger.warning(
             "[Attack Success] Non-existing correlated object mistakenly detected, with image-level caption in the question.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Non-existing correlated object mistakenly detected, with image-level caption in the question.")
+
     else:
         logger.warning(
             "[Attack Failed] Non-existing correlated object not detected, with image-level caption in the question.")
+
+        if notebook_print:
+            print(
+                "[Attack Failed] Non-existing correlated object not detected, with image-level caption in the question.")
 
     ########## Correlated Object Existence Detection: Response conflict between vanilla and correlated questions ###########
 
@@ -1105,9 +1463,17 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
 
         logger.warning(
             "[Attack Success] Non-existing correlated object detection inconsistent between vanilla and correlated questions.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Non-existing correlated object detection inconsistent between vanilla and correlated questions.")
+
     else:
         logger.warning(
             "[Attack Failed] Non-existing correlated object detection consistent between vanilla and correlated questions")
+
+        if notebook_print:
+            print("[Attack Failed] Non-existing correlated object detection consistent between vanilla and correlated questions")
 
     ########## Correlated Object Existence Detection: Response conflict between vanilla and caption questions ###########
     eval_result = evaluate_by_chatgpt_quick_test("Is there a/an {} in this image?".format(disturbing_obj),
@@ -1122,9 +1488,17 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
 
         logger.warning(
             "[Attack Success] Non-existing correlated object detection inconsistent between vanilla and caption questions.")
+
+        if notebook_print:
+            print("[Attack Success] Non-existing correlated object detection inconsistent between vanilla and caption questions.")
+
     else:
         logger.warning(
             "[Attack Failed] Non-existing correlated object detection consistent between vanilla and caption questions")
+
+        if notebook_print:
+            print(
+                "[Attack Failed] Non-existing correlated object detection consistent between vanilla and caption questions")
 
     ########## Correlated Object Existence Detection: Response conflict between vanilla and caption questions ###########
     eval_result = evaluate_by_chatgpt_quick_test("Is there a/an {} in this image?".format(disturbing_obj),
@@ -1139,9 +1513,18 @@ def evaluation_correlated_existence_pred_model(result_img_path, ground_truth, vq
 
         logger.warning(
             "[Attack Success] Non-existing correlated object detection inconsistent between correlated and caption questions.")
+
+        if notebook_print:
+            print(
+                "[Attack Success] Non-existing correlated object detection inconsistent between correlated and caption questions.")
+
     else:
         logger.warning(
             "[Attack Failed] Non-existing correlated object detection consistent between correlated and caption questions")
+
+        if notebook_print:
+            print(
+                "[Attack Failed] Non-existing correlated object detection consistent between correlated and caption questions")
 
     if success:
         if debug:

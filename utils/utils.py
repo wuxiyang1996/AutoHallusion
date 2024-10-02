@@ -643,7 +643,7 @@ def object_stitch(init_img_path, obj_img_path, obj_mask_path, out_image_name, ne
     img_size = (new_bbox[3] - new_bbox[1], new_bbox[2] - new_bbox[0])
 
     init_img = Image.open(init_img_path).convert('RGBA')
-    obj_img = Image.open(obj_img_path)
+    obj_img = Image.open(obj_img_path).convert('RGBA')
     obj_mask = Image.open(obj_mask_path)
 
     init_img = np.array(init_img)
@@ -654,7 +654,6 @@ def object_stitch(init_img_path, obj_img_path, obj_mask_path, out_image_name, ne
     obj_mask = (np.array(obj_mask.resize(img_size)) > 0).astype(np.uint)
 
     img_ws = init_img[new_bbox[1]:new_bbox[3], new_bbox[0]:new_bbox[2], :]
-
     img_ws = img_ws * (1 - obj_mask.reshape((img_size[0], img_size[1], 1))) + obj_img * obj_mask.reshape(
         (img_size[0], img_size[1], 1))
 

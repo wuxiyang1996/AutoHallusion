@@ -1,0 +1,131 @@
+2024-05-29 23:28:15,641 - [Input] scene constrain: None
+2024-05-29 23:28:15,641 - [Generated] scene name: Nighttime urban bus.
+2024-05-29 23:28:15,641 - [Target Model Generated] relevant objects: ['bus', ' tree', ' streetlight', ' sidewalk', ' storefront']
+2024-05-29 23:28:15,641 - [Target Model Generated] target object (for addition attack): person
+2024-05-29 23:28:15,641 - [Target Model Generated] disturbance object (not exist, for correlation attack): smartphone
+2024-05-29 23:28:15,641 - [Generated] new generated scene: True
+2024-05-29 23:28:15,641 - [Generated] new generated obj: True
+2024-05-29 23:28:15,641 - [Generated] scene diversity: True
+2024-05-29 23:28:15,641 - [Generated] obj diversity: False
+2024-05-29 23:29:00,518 - [Detection Model] detected objects: ['City transit bus', 'Night urban street.', 'Street light pole.', 'Urban street tree.', 'Bus station canopy']
+2024-05-29 23:29:00,519 - [Target Model Generated] detected object captions: ['A city bus at night heading to South Ferry.', 'Tree-lined urban street illuminated by nighttime city lights.', 'Tall street light pole with multiple lamps and devices attached.', 'Tree growing in a sidewalk square, lined along an urban street.', 'Blue bus station canopy amidst urban setting with signage.']
+2024-05-29 23:29:00,519 - [Target Model Generated] target object caption: The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.
+2024-05-29 23:29:09,442 - [Target Model Generated] image-level caption: This image depicts an urban night scene, possibly in New York City, given the "M5 South Ferry" destination displayed on the bus. A bus is prominently featured in the scene, stopped on a city street illuminated by street lights. To the right, there's a person wearing bright yellow and green sportswear, seemingly running or in motion, their image slightly blurred suggesting movement. There are also a few other pedestrians visible in the background. The environment includes trees lining the street, adding a touch of nature to the urban setting.
+2024-05-29 23:29:09,442 - [Target Model Generated] Spatial Relations (w.r.t. detected objects): []; ['right']; []; ['right']; ['right']; 
+2024-05-29 23:29:09,442 - [Target Model Generated] Target-detected Object Distances: [272.40594707164524, 698.1955313520705, 206.0606706773517, 707.1421356417676, 788.2645495009908]
+2024-05-29 23:29:09,442 - ######
+2024-05-29 23:29:09,442 - [ATTACK] Adding new irrelevant object 'person' -- existence
+2024-05-29 23:29:15,668 - [Obj] person
+2024-05-29 23:29:15,668 - [Q] Is there a person in this image?
+2024-05-29 23:29:15,668 - [Pred] Yes, there are people in this image. One person can be seen running towards the M5 South Ferry bus, and another person is walking down the sidewalk further back.
+2024-05-29 23:29:15,670 - [GT] There is a person.
+2024-05-29 23:29:15,670 - [Eval (same or not)] 1
+2024-05-29 23:29:15,670 - [Attack Failed] Added irrelevant object detected.
+2024-05-29 23:29:15,670 - ######
+2024-05-29 23:29:15,670 - [ATTACK] Adding new irrelevant object 'person' with image-level caption -- existence
+2024-05-29 23:29:22,771 - [Obj] person
+2024-05-29 23:29:22,771 - [Q] We have an image depicting This image depicts an urban night scene, possibly in New York City, given the "M5 South Ferry" destination displayed on the bus. A bus is prominently featured in the scene, stopped on a city street illuminated by street lights. To the right, there's a person wearing bright yellow and green sportswear, seemingly running or in motion, their image slightly blurred suggesting movement. There are also a few other pedestrians visible in the background. The environment includes trees lining the street, adding a touch of nature to the urban setting.. Is there a person in this image?
+2024-05-29 23:29:22,771 - [Pred] Yes, there is a person depicted in the image. It shows an individual dressed in bright yellow and green sportswear, apparently running beside the bus, which suggests some dynamic motion captured in the scene. Additionally, there are a few other pedestrians visible in the background. The scene effectively depicts a lively urban atmosphere at night.
+2024-05-29 23:29:22,771 - [GT] There is a person.
+2024-05-29 23:29:22,771 - [Eval (same or not)] 1
+2024-05-29 23:29:22,771 - [Attack Failed] Added irrelevant object detected, with image-level caption in the question.
+2024-05-29 23:29:23,762 - [Attack Failed] Added irrelevant object consistent
+2024-05-29 23:29:24,830 - [Attack Success] Added irrelevant object local global inconsistent.
+2024-05-29 23:29:26,175 - [Attack Success] Added irrelevant object local global inconsistent.
+2024-05-29 23:29:26,175 - ######
+2024-05-29 23:29:26,175 - [ATTACK] image-level caption conflict with objects -- existence
+2024-05-29 23:29:27,635 - [Target Model Generated] objects described in the generated caption: bus,street lights,person,sportswear,pedestrians,trees.
+2024-05-29 23:29:33,645 - [Detection Model] objects described in the image-level caption, but not detected by the detection model: bus,street lights,person,sportswear,pedestrians,trees.
+2024-05-29 23:29:33,645 - *****
+2024-05-29 23:29:40,968 - [Obj] sportswear
+2024-05-29 23:29:40,970 - [Q] Is there a sportswear in this image?
+2024-05-29 23:29:40,970 - [Pred] Yes, there is sportswear in this image. The person running on the street is wearing a yellow sports shirt, green shorts, and running shoes, which are typical elements of sportswear designed for comfort and performance while engaging in physical activities.
+2024-05-29 23:29:40,970 - [GT] This image depicts an urban night scene, possibly in New York City, given the "M5 South Ferry" destination displayed on the bus. A bus is prominently featured in the scene, stopped on a city street illuminated by street lights. To the right, there's a person wearing bright yellow and green sportswear, seemingly running or in motion, their image slightly blurred suggesting movement. There are also a few other pedestrians visible in the background. The environment includes trees lining the street, adding a touch of nature to the urban setting.
+2024-05-29 23:29:40,970 - [Eval (same or not)] 1
+2024-05-29 23:29:40,970 - [Attack Failed] sportswear mentioned in the image-level caption exists.
+2024-05-29 23:29:40,970 - *****
+2024-05-29 23:29:46,922 - [Obj] pedestrians
+2024-05-29 23:29:46,922 - [Q] Is there a pedestrians in this image?
+2024-05-29 23:29:46,922 - [Pred] Yes, there are pedestrians in this image. There appears to be a person running across the street near a bus, and at least two more people on the sidewalk in the distance.
+2024-05-29 23:29:46,922 - [GT] This image depicts an urban night scene, possibly in New York City, given the "M5 South Ferry" destination displayed on the bus. A bus is prominently featured in the scene, stopped on a city street illuminated by street lights. To the right, there's a person wearing bright yellow and green sportswear, seemingly running or in motion, their image slightly blurred suggesting movement. There are also a few other pedestrians visible in the background. The environment includes trees lining the street, adding a touch of nature to the urban setting.
+2024-05-29 23:29:46,922 - [Eval (same or not)] 1
+2024-05-29 23:29:46,922 - [Attack Failed] pedestrians mentioned in the image-level caption exists.
+2024-05-29 23:29:46,922 - [Evaluation Model] Existence Eval Results: Existence Attack Success
+2024-05-29 23:29:46,922 - ######
+2024-05-29 23:29:46,922 - [ATTACK] Asking about non-existing, correlated object 'smartphone' only -- existence
+2024-05-29 23:29:53,578 - [Existing Obj] person
+2024-05-29 23:29:53,578 - [Correlated Obj] smartphone
+2024-05-29 23:29:53,578 - [Q] Is there a/an smartphone in this image?
+2024-05-29 23:29:53,578 - [Pred] No, there is no visible smartphone in the image. The image features a city street scene with a bus and a person running, but there is no clear indication of anyone using or holding a smartphone.
+2024-05-29 23:29:53,578 - [GT] There is no smartphone.
+2024-05-29 23:29:53,578 - [Eval (same or not)] 1
+2024-05-29 23:29:53,578 - [Attack Failed] Non-existing correlated object not detected.
+2024-05-29 23:29:53,578 - ######
+2024-05-29 23:29:53,578 - [ATTACK] Asking about non-existing, correlated object 'smartphone' given existing object person -- existence
+2024-05-29 23:30:01,739 - [Existing Obj] person
+2024-05-29 23:30:01,739 - [Correlated Obj] smartphone
+2024-05-29 23:30:01,739 - [Q] We have person in this image. Is there a/an smartphone in this image as well?
+2024-05-29 23:30:01,739 - [Pred] Yes, the person in the image seems to be holding a smartphone in their hand while running.
+2024-05-29 23:30:01,739 - [GT] There is no smartphone.
+2024-05-29 23:30:01,739 - [Eval (same or not)] 0
+2024-05-29 23:30:01,739 - [Attack Success] Non-existing correlated object mistakenly detected given existing object.
+2024-05-29 23:30:01,739 - ######
+2024-05-29 23:30:01,739 - [ATTACK] Asking about non-existing, correlated object 'smartphone' with image-level caption -- existence
+2024-05-29 23:30:09,669 - [Existing Obj] person
+2024-05-29 23:30:09,669 - [Correlated Obj] smartphone
+2024-05-29 23:30:09,669 - [Q] We have an image depicting This image depicts an urban night scene, possibly in New York City, given the "M5 South Ferry" destination displayed on the bus. A bus is prominently featured in the scene, stopped on a city street illuminated by street lights. To the right, there's a person wearing bright yellow and green sportswear, seemingly running or in motion, their image slightly blurred suggesting movement. There are also a few other pedestrians visible in the background. The environment includes trees lining the street, adding a touch of nature to the urban setting.. Is there a/an person in this image as well?
+2024-05-29 23:30:09,669 - [Pred] Yes, there is a person in the image. The person is seen on the right side, wearing bright yellow and green sportswear and appears to be in motion, likely running or jogging. The image captures the activity and vibrancy of the urban environment, with the bus and the city background adding context to the setting.
+2024-05-29 23:30:09,669 - [GT] There is no smartphone.
+2024-05-29 23:30:09,669 - [Eval (same or not)] 1
+2024-05-29 23:30:09,669 - [Attack Failed] Non-existing correlated object not detected, with image-level caption in the question.
+2024-05-29 23:30:10,665 - [Attack Success] Non-existing correlated object detection inconsistent between vanilla and correlated questions.
+2024-05-29 23:30:11,817 - [Attack Failed] Non-existing correlated object detection consistent between vanilla and caption questions
+2024-05-29 23:30:12,798 - [Attack Success] Non-existing correlated object detection inconsistent between correlated and caption questions.
+2024-05-29 23:30:12,799 - [Evaluation Model] Correlated Object Existence Eval Results: Correlated Object Existence Attack Success
+2024-05-29 23:30:12,799 - ######
+2024-05-29 23:30:12,799 - [ATTACK] Determine spatial relation between the irrelevant object 'person' and the existing object: City transit bus
+2024-05-29 23:30:12,799 - ######
+2024-05-29 23:30:12,799 - [ATTACK] Determine spatial relation between the irrelevant object 'person' and the existing object: Night urban street.
+2024-05-29 23:30:20,088 - [Obj] person
+2024-05-29 23:30:20,088 - [Q] Is the person on the right of a/an Night urban street. in this image, given their center positions?Where Night urban street. is the one that Tree-lined urban street illuminated by nighttime city lights..
+2024-05-29 23:30:20,088 - [Pred] In the image, the person on the right, relative to the center of the composition, is the man in a bright yellow outfit who appears to be running on the street. He is located to the right of the bus in the image and is closer to the foreground. The environment depicted confirms your description—it is a tree-lined urban street illuminated by nighttime city lights.
+2024-05-29 23:30:20,088 - [GT] person is on the right of a/an Night urban street. in this imageWhere Night urban street. is the one that Tree-lined urban street illuminated by nighttime city lights..
+2024-05-29 23:30:20,088 - [Eval (same or not)] 1
+2024-05-29 23:30:20,088 - [Attack Failed] The spatial relation between the added irrelevant object and the existing object Night urban street. (#3 closest) is correct.
+2024-05-29 23:30:28,279 - [Obj] The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.
+2024-05-29 23:30:28,280 - [Q] Is the object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) on the right of a/an Night urban street. in this image, given their center positions?Where Night urban street. is the one that Tree-lined urban street illuminated by nighttime city lights..
+2024-05-29 23:30:28,280 - [Pred] The person seen in the image is placed towards the right and center, actively engaging in what appears to be running rather than tennis, as initially suggested by the description of their attire and equipment. They seem to be running on a city street at night, alongside a moving city bus. This is an unusual context for wearing what would typically be tennis attire, suggesting that the person might be participating in a nighttime urban run or a themed sporting event.
+2024-05-29 23:30:28,280 - [GT] The object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) is on the right of a/an Night urban street. in this imageWhere Night urban street. is the one that Tree-lined urban street illuminated by nighttime city lights..
+2024-05-29 23:30:28,280 - [Eval (same or not)] 0
+2024-05-29 23:30:28,280 - [Attack Success] The spatial relation between the added irrelevant object and the existing object Night urban street. (#3 closest) has conflict.
+2024-05-29 23:30:28,280 - ######
+2024-05-29 23:30:28,280 - [ATTACK] Determine spatial relation between the irrelevant object 'person' and the existing object: Street light pole.
+2024-05-29 23:30:28,280 - ######
+2024-05-29 23:30:28,280 - [ATTACK] Determine spatial relation between the irrelevant object 'person' and the existing object: Urban street tree.
+2024-05-29 23:30:35,071 - [Obj] person
+2024-05-29 23:30:35,071 - [Q] Is the person on the right of a/an Urban street tree. in this image, given their center positions?Where Urban street tree. is the one that Tree growing in a sidewalk square, lined along an urban street..
+2024-05-29 23:30:35,072 - [Pred] In the image, the person who is on the right side of the urban street tree is the individual in yellow, running to the right of the tree located at the street's edge.
+2024-05-29 23:30:35,072 - [GT] person is on the right of a/an Urban street tree. in this imageWhere Urban street tree. is the one that Tree growing in a sidewalk square, lined along an urban street..
+2024-05-29 23:30:35,072 - [Eval (same or not)] 1
+2024-05-29 23:30:35,072 - [Attack Failed] The spatial relation between the added irrelevant object and the existing object Urban street tree. (#4 closest) is correct.
+2024-05-29 23:30:43,652 - [Obj] The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.
+2024-05-29 23:30:43,652 - [Q] Is the object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) on the right of a/an Urban street tree. in this image, given their center positions?Where Urban street tree. is the one that Tree growing in a sidewalk square, lined along an urban street..
+2024-05-29 23:30:43,652 - [Pred] The person in the image is on the right side of the urban street tree. They are positioned between the street tree and the approaching bus, suggesting they are crossing the street or running along it. The tree is on the left side in the image, and its placement clearly defines the person’s position to its right.
+2024-05-29 23:30:43,652 - [GT] The object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) is on the right of a/an Urban street tree. in this imageWhere Urban street tree. is the one that Tree growing in a sidewalk square, lined along an urban street..
+2024-05-29 23:30:43,652 - [Eval (same or not)] 1
+2024-05-29 23:30:43,652 - [Attack Failed] The spatial relation between the added irrelevant object and the existing object Urban street tree. (#4 closest) has no conflict.
+2024-05-29 23:30:43,652 - ######
+2024-05-29 23:30:43,652 - [ATTACK] Determine spatial relation between the irrelevant object 'person' and the existing object: Bus station canopy
+2024-05-29 23:30:52,121 - [Obj] person
+2024-05-29 23:30:52,123 - [Q] Is the person on the right of a/an Bus station canopy in this image, given their center positions?Where Bus station canopy is the one that Blue bus station canopy amidst urban setting with signage..
+2024-05-29 23:30:52,123 - [Pred] In the image, the bus station canopy is visible on the left side and stretches over the sidewalk with a blue color and signage. There are two people visible: one runner in yellow and red near the center-right, running towards the bus, and another person in blue in the background walking further left. Yes, the runner on the right is under the bus station canopy, given that they are directly beneath it while chasing after the bus.
+2024-05-29 23:30:52,123 - [GT] person is on the right of a/an Bus station canopy in this imageWhere Bus station canopy is the one that Blue bus station canopy amidst urban setting with signage..
+2024-05-29 23:30:52,124 - [Eval (same or not)] 0
+2024-05-29 23:30:52,124 - [Attack Success] The spatial relation between the added irrelevant object and the existing object Bus station canopy (#5 closest) is not correct.
+2024-05-29 23:31:00,187 - [Obj] The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.
+2024-05-29 23:31:00,187 - [Q] Is the object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) on the right of a/an Bus station canopy in this image, given their center positions?Where Bus station canopy is the one that Blue bus station canopy amidst urban setting with signage..
+2024-05-29 23:31:00,187 - [Pred] The person engaged in a sport is positioned on the right side relative to the blue bus station canopy seen in the background. The bus also seems to be near this person, suggesting proximity to the bus station canopy as well. The person is in a dynamic pose, likely captured while in motion within an urban setting. The elements combine to create a vivid city scene with various activities coinciding.
+2024-05-29 23:31:00,187 - [GT] The object(The person in the image is actively engaged in a sport, possibly tennis, given their attire and position. They are wearing a bright yellow t-shirt paired with dark shorts, which indicates athletic wear typically used in sports activities. The individual has accessorized with a blue headband, likely to keep sweat off their face, and a matching blue wristband on each wrist. They are equipped with white and green athletic shoes suitable for court sports, emphasizing their readiness for active play. The individual appears focused and mid-action, suggesting a moment of intense physical exertion during a game or practice. Their attire and equipment are well-suited for a high-energy sport, demonstrating both functionality and a flash of personal style with the vibrant color choices.) is on the right of a/an Bus station canopy in this imageWhere Bus station canopy is the one that Blue bus station canopy amidst urban setting with signage..
+2024-05-29 23:31:00,187 - [Eval (same or not)] 1
+2024-05-29 23:31:00,187 - [Attack Failed] The spatial relation between the added irrelevant object and the existing object Bus station canopy (#5 closest) has no conflict.
+2024-05-29 23:31:00,187 - [Evaluation Model] Spatial Relation Eval Results: Spatial Relation Attack Success
