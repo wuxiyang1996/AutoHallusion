@@ -2,7 +2,7 @@
 
 [Xiyang Wu*](https://wuxiyang1996.github.io/), [Tianrui Guan*](https://tianruiguan.phd), Dianqi Li, Shuaiyi Huang, Xiaoyu Liu, Xijun Wang, Ruiqi Xian, Abhinav Shrivastava, Furong Huang, Jordan Lee Boyd-Graber, Tianyi Zhou, Dinesh Manocha
 
-**[Paper](https://arxiv.org/abs/2406.10900)** | **[Twitter](https://x.com/terryguan97/status/1814757000066253120)** | **[Website](https://wuxiyang1996.github.io/autohallusion_page/)** | **[Code](https://github.com/wuxiyang1996/AutoHallusion)**
+**[Paper](https://arxiv.org/abs/2406.10900)** | **[Twitter](https://x.com/terryguan97/status/1814757000066253120)** | **[Website](https://wuxiyang1996.github.io/autohallusion_page/)** | **[Huggingface](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** | **[Code](https://github.com/wuxiyang1996/AutoHallusion)**
 
 <p align="center" >
       <img src="./imgs/teaser.png" alt="Teaser" class="center" width="800"/>
@@ -10,6 +10,7 @@
 
 ## Updates
 - [09/20] Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024 Findings](https://2024.emnlp.org/)**.
+- [07/20] We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
 - [06/15] We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
 
 ## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of Large Multimodal Models (GPT-4V) and their mitigations!
@@ -38,6 +39,8 @@ If you find our paper useful, please cite our paper:
 ```
 
 ## Dependency
+
+## Benchmark
 
 ## Demo
 
