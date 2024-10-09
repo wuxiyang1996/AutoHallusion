@@ -58,7 +58,7 @@ Install the dependencies with `pip install -r requirements.txt`
 OR
 
 1. Install **[PyTorch](https://pytorch.org/)** (We use 2.2.2)
-2. Install object detection model **[Owl-ViT](https://huggingface.co/docs/transformers/en/model_doc/owlvit)**: `pip install transformer` and follow the instructions provided in the [link](https://huggingface.co/docs/transformers/en/model_doc/owlvit).
+2. Install object detection model **[OWL-ViT](https://huggingface.co/docs/transformers/en/model_doc/owlvit)**: `pip install transformer` and follow the instructions provided in the [link](https://huggingface.co/docs/transformers/en/model_doc/owlvit).
 3. Install LVLMs: `pip install openai` or other LVLMs to be evaluated.
 4. Other dependencies: `pip install opencv-python numpy tqdm pillow rembg`
 
