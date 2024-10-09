@@ -13,8 +13,23 @@
 - [07/20] We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
 - [06/15] We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
 
-## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of Large Multimodal Models (GPT-4V) and their mitigations!
-Large vision-language models (LVLMs) hallucinate: certain context cues in an image may trigger the language module's overconfident and incorrect reasoning on abnormal or hypothetical objects. Though a few benchmarks have been developed to investigate LVLM hallucinations, they mainly rely on hand-crafted corner cases whose fail patterns may hardly generalize, and finetuning on them could undermine their validity. These motivate us to develop the first automatic benchmark generation approach, AUTOHALLUSION, that harnesses a few principal strategies to create diverse hallucination examples. It probes the language modules in LVLMs for context cues and uses them to synthesize images by: (1) adding objects abnormal to the context cues; (2) for two co-occurring objects, keeping one and excluding the other; or (3) removing objects closely tied to the context cues. It then generates image-based questions whose ground-truth answers contradict the language module's prior. A model has to overcome contextual biases and distractions to reach correct answers, while incorrect or inconsistent answers indicate hallucinations. AUTOHALLUSION enables us to create new benchmarks at the minimum cost and thus overcomes the fragility of hand-crafted benchmarks. It also reveals common failure patterns and reasons, providing key insights to detect, avoid, or control hallucinations. Comprehensive evaluations of top-tier LVLMs, e.g., GPT-4V(ision), Gemini Pro Vision, Claude 3, and LLaVA-1.5, show a 97.7% and 98.7% success rate of hallucination induction on synthetic and real-world datasets of AUTOHALLUSION, paving the way for a long battle against hallucinations.
+## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of 
+Large Multimodal Models (GPT-4V) and their mitigations!
+Large vision-language models (LVLMs) hallucinate: certain context cues in an image may trigger the language module's 
+overconfident and incorrect reasoning on abnormal or hypothetical objects. Though a few benchmarks have been developed 
+to investigate LVLM hallucinations, they mainly rely on hand-crafted corner cases whose fail patterns may hardly 
+generalize, and finetuning on them could undermine their validity. These motivate us to develop the first automatic 
+benchmark generation approach, AUTOHALLUSION, that harnesses a few principal strategies to create diverse hallucination 
+examples. It probes the language modules in LVLMs for context cues and uses them to synthesize images by: (1) adding 
+objects abnormal to the context cues; (2) for two co-occurring objects, keeping one and excluding the other; or (3) 
+removing objects closely tied to the context cues. It then generates image-based questions whose ground-truth answers 
+contradict the language module's prior. A model has to overcome contextual biases and distractions to reach correct 
+answers, while incorrect or inconsistent answers indicate hallucinations. AUTOHALLUSION enables us to create new 
+benchmarks at the minimum cost and thus overcomes the fragility of hand-crafted benchmarks. It also reveals common 
+failure patterns and reasons, providing key insights to detect, avoid, or control hallucinations. Comprehensive 
+evaluations of top-tier LVLMs, e.g., GPT-4V(ision), Gemini Pro Vision, Claude 3, and LLaVA-1.5, show a 97.7% and 98.7% 
+success rate of hallucination induction on synthetic and real-world datasets of AUTOHALLUSION, paving the way for a 
+long battle against hallucinations.
 
 If you find our paper useful, please cite our paper:
 ```bibtex
@@ -41,7 +56,8 @@ If you find our paper useful, please cite our paper:
 ## Dependency
 
 ## Benchmark
-We provide a benchmark including hallucination cases created by abnormal object insertion, paired object insertion and correlated object removal strategies, from both synthetic and real-world images. 
+We provide a benchmark including hallucination cases created by abnormal object insertion, paired object insertion and 
+correlated object removal strategies, from both synthetic and real-world images. 
 
 To keep evaluation simple, we only provide the question in form of yes/no questions.
 
@@ -50,13 +66,19 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 | Oct 3, 2024 | [autohallusion_data.json](https://drive.google.com/file/d/17yrpbLrtd4MmqNFE1ET5qxksea7i5u-x/view?usp=drive_link) | [image.zip](https://drive.google.com/file/d/1HsbIPw8wslRpBswSZygp6YhBMqUHvfVW/view?usp=drive_link) |     3129     |
 
 ## Demo
+We provide a few light-weight demos to help users quickly understand the usage of different strategies provided by 
+our AutoHallusion pipeline and craft hallucination cases.
+
 ### HuggingFace
 We provide an interactive online **[HuggingFace demo](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** for users 
 to craft hallucination cases easily using either strategies of AutoHallusion, with synthetic images generated from text 
 or uploaded images.
 
 ### Jupyter Notebook
-We provide three jupyter notebooks
+We provide three jupyter notebooks **[Abnormal Object Insertion](./abnormal_obj_insertion.ipynb)**, 
+**[Paired Object Insertion](./paired_obj_insertion.ipynb)** and **[Correlated Object Removal](./corr_obj_removal.ipynb)**.
+We provide illustrative comments along with each code block with visualization of results to help users understand the 
+purpose of each step throughout the whole hallucination crafting procedure. 
 
 ## Usage
 
