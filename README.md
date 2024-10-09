@@ -51,6 +51,9 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 
 ## Demo
 ### HuggingFace
+We provide an interactive online **[HuggingFace demo](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** for users 
+to craft hallucination cases easily using either strategies of AutoHallusion, with synthetic images generated from text 
+or uploaded images.
 
 ### Jupyter Notebook
 We provide three jupyter notebooks
