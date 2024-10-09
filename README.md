@@ -54,6 +54,9 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 ## Usage
 
 ## Leaderboard
+### Metric
+
+### Evaluation
 
 ## License
 This repository is under [BSD 3-Clause License](LICENSE.md).
