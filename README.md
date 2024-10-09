@@ -41,12 +41,19 @@ If you find our paper useful, please cite our paper:
 ## Dependency
 
 ## Benchmark
+We provide a benchmark including hallucination cases created by abnormal object insertion, paired object insertion and correlated object removal strategies, from both synthetic and real-world images. 
+
+To keep evaluation simple, we only provide the question in form of yes/no questions.
+
+| Updated on  |            Questions and Annotations             |                                             Figures                                             | Dataset Size |
+|-------------|:------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|
+| Oct 3, 2024 | [autohallusion_data.json](https://drive.google.com/file/d/17yrpbLrtd4MmqNFE1ET5qxksea7i5u-x/view?usp=drive_link) | [image.zip](https://drive.google.com/file/d/1HsbIPw8wslRpBswSZygp6YhBMqUHvfVW/view?usp=drive_link) |     3129     |
 
 ## Demo
 
 ## Usage
 
-## Metric Leaderboard
+## Leaderboard
 
 ## License
-This repository is under [BSD 3-Clause License](LICENSE.md). 
+This repository is under [BSD 3-Clause License](LICENSE.md).
