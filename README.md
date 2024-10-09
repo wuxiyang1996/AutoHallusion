@@ -60,11 +60,31 @@ We provide three jupyter notebooks
 
 
 ## Leaderboard
-### Metric
-
 ### Evaluation
+We evaluate each model's performance over benchmark created by AutoHallusion. The evaluation procedure for each model 
+to get the results presented in the leaderboard includes:
 
-| Model                 | Overall Acc. | Overall Acc. (Synthetic) | Exi. Acc. (Synthetic) | Sp. Acc. (Synthetic) | Overall Acc. (Real-World) | Exi. Acc. (Real-World) | Sp. Acc. (Real-World) |
+**Step 1**: Install the **[Questions and Annotations](https://drive.google.com/file/d/17yrpbLrtd4MmqNFE1ET5qxksea7i5u-x/view?usp=drive_link)**
+and **[Image](https://drive.google.com/file/d/1HsbIPw8wslRpBswSZygp6YhBMqUHvfVW/view?usp=drive_link)**. Setup model to be evaluated.
+
+**Step 2**: We run the VQA tasks for each model over the question-image pair in the benchmark to get the answer, 
+using the inference code for each model we provided **[GPT-4V-Turbo](./eval/autohall_gpt.py)**, 
+**[Gemini Pro Vision](./eval/autohall_gemini.py)** and **[Claude 3](./eval/autohall_claude3.py)**. 
+Results are stored in the `autohallusion_data_{model name}_res.json`.
+
+**Step 3**: We run **[evaluation code](./eval/eval_code.py)** that uses **GPT-4V-Turbo** to determine if the answer produced
+by the models conveys the same meaning as the ground truth. Results produced by `autohallusion_data_{model name}_res_evaluated.json`.
+are presented as breakdowns of accuracy values over examples from different categories, as presented in the leaderboard.
+
+### Metric
+The metrics on the leaderboard we provide include:
+* **Overall Accuracy:** The question-answering accuracy over the whole benchmark.
+* **Breakdown (over Synthetic/Real-world Dataset)**
+    * **Overall Accuracy:** The question-answering accuracy over examples generated from **Synthetic/Real-world images**.
+    * **Existence Accuracy:** The question-answering accuracy for **existence questions** over examples generated from **Synthetic/Real-world images**.
+    * **Spatial Relation Accuracy:** The question-answering accuracy for **spatial relation questions** over examples generated from **Synthetic/Real-world images**.
+
+| Model                 | Overall Acc. | Overall Acc. (Synthetic) | Exi. Acc. (Synthetic) | Sp. Acc. (Synthetic) | Overall Acc. (Real-world) | Exi. Acc. (Real-world) | Sp. Acc. (Real-world) |
 |-----------------------|:------------:|:------------------------:|:---------------------:|:--------------------:|:-------------------------:|:----------------------:|:---------------------:|
 | **GPT4V-Turbo**       |     66.0     |           68.5           |         68.3          |         68.8         |           62.9            |          71.5          |         56.3          |
 | **Gemini Pro Vision** |     51.4     |           53.5           |         59.4          |         43.4         |           48.8            |          70.6          |         31.8          |
