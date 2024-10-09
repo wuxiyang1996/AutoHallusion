@@ -50,13 +50,29 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 | Oct 3, 2024 | [autohallusion_data.json](https://drive.google.com/file/d/17yrpbLrtd4MmqNFE1ET5qxksea7i5u-x/view?usp=drive_link) | [image.zip](https://drive.google.com/file/d/1HsbIPw8wslRpBswSZygp6YhBMqUHvfVW/view?usp=drive_link) |     3129     |
 
 ## Demo
+### HuggingFace
+
+### Jupyter Notebook
+We provide three jupyter notebooks
 
 ## Usage
+
+
 
 ## Leaderboard
 ### Metric
 
 ### Evaluation
+
+| Model                 | Overall Acc. | Overall Acc. (Synthetic) | Exi. Acc. (Synthetic) | Sp. Acc. (Synthetic) | Overall Acc. (Real-World) | Exi. Acc. (Real-World) | Sp. Acc. (Real-World) |
+|-----------------------|:------------:|:------------------------:|:---------------------:|:--------------------:|:-------------------------:|:----------------------:|:---------------------:|
+| **GPT4V-Turbo**       |     66.0     |           68.5           |         68.3          |         68.8         |           62.9            |          71.5          |         56.3          |
+| **Gemini Pro Vision** |     51.4     |           53.5           |         59.4          |         43.4         |           48.8            |          70.6          |         31.8          |
+| **Claude 3**          |     37.1     |           37.3           |         44.6          |         24.7         |           36.9            |          55.6          |         22.4          |
+| **LLaVA-1.5**         |     44.5     |           46.6           |         54.2          |         33.8         |           41.8            |          60.4          |         27.3          |
+| **miniGPT4**          |     51.0     |           50.2           |         56.4          |         39.7         |           52.1            |          67.7          |         39.9          |
+
+
 
 ## License
 This repository is under [BSD 3-Clause License](LICENSE.md).
