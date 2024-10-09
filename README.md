@@ -13,8 +13,7 @@
 - [07/20] We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
 - [06/15] We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
 
-## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of 
-Large Multimodal Models (GPT-4V) and their mitigations!
+## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of Large Multimodal Models (GPT-4V) and their mitigations!
 Large vision-language models (LVLMs) hallucinate: certain context cues in an image may trigger the language module's 
 overconfident and incorrect reasoning on abnormal or hypothetical objects. Though a few benchmarks have been developed 
 to investigate LVLM hallucinations, they mainly rely on hand-crafted corner cases whose fail patterns may hardly 
@@ -54,6 +53,7 @@ If you find our paper useful, please cite our paper:
 ```
 
 ## Dependency
+
 
 ## Benchmark
 We provide a benchmark including hallucination cases created by abnormal object insertion, paired object insertion and 
