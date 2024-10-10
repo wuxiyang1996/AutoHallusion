@@ -9,26 +9,14 @@
 </p>
 
 ## Updates
-- [09/20] Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024 Findings](https://2024.emnlp.org/)**.
-- [07/20] We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
-- [06/15] We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
+- [09/20/2024] 🔥 Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024 Findings](https://2024.emnlp.org/)**.
+- [07/20/2024] 🔥 We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
+- [06/15/2024] 🔥 We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
+- [02/26/2024] 🔥 Our [HallusionBench](https://arxiv.org/abs/2310.14566) is accepted by **[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.html)**.
+- [11/28/2023] 🔥 The full paper (HallusionBench) is uploaded and can be accessed [here](https://arxiv.org/abs/2310.14566). The dataset is expanded and leaderboard is updated.
+- [10/27/2023] 🔥 The [leaderboard](https://paperswithcode.com/sota/visual-question-answering-vqa-on-3) for HallusionBench and evaluation code is released! **Welcome to update your model on our leaderboard!**
+- [10/24/2023] 🔥 The early report for HallusionBench with case analysis and insights is available [here](https://arxiv.org/abs/2310.14566).
 
-## We delightedly welcome everyone in our community to continue exploring the mechanisms causing hallucinations of Large Multimodal Models (GPT-4V) and their mitigations!
-Large vision-language models (LVLMs) hallucinate: certain context cues in an image may trigger the language module's 
-overconfident and incorrect reasoning on abnormal or hypothetical objects. Though a few benchmarks have been developed 
-to investigate LVLM hallucinations, they mainly rely on hand-crafted corner cases whose fail patterns may hardly 
-generalize, and finetuning on them could undermine their validity. These motivate us to develop the first automatic 
-benchmark generation approach, AUTOHALLUSION, that harnesses a few principal strategies to create diverse hallucination 
-examples. It probes the language modules in LVLMs for context cues and uses them to synthesize images by: (1) adding 
-objects abnormal to the context cues; (2) for two co-occurring objects, keeping one and excluding the other; or (3) 
-removing objects closely tied to the context cues. It then generates image-based questions whose ground-truth answers 
-contradict the language module's prior. A model has to overcome contextual biases and distractions to reach correct 
-answers, while incorrect or inconsistent answers indicate hallucinations. AUTOHALLUSION enables us to create new 
-benchmarks at the minimum cost and thus overcomes the fragility of hand-crafted benchmarks. It also reveals common 
-failure patterns and reasons, providing key insights to detect, avoid, or control hallucinations. Comprehensive 
-evaluations of top-tier LVLMs, e.g., GPT-4V(ision), Gemini Pro Vision, Claude 3, and LLaVA-1.5, show a 97.7% and 98.7% 
-success rate of hallucination induction on synthetic and real-world datasets of AUTOHALLUSION, paving the way for a 
-long battle against hallucinations.
 
 If you find our paper useful, please cite our paper:
 ```bibtex
