@@ -91,7 +91,7 @@ hyper-parameters and experiment flags.
 VQA, etc. The specific LVLM is decided by `object thinking` (for scene and object prompting) and `image caption` 
 (for VQA tasks) in the hyper-parameters.
 `utils_{model name}_clean.py`: All LVLM-related functions for scene image generation, object prompting, VQA, etc., given 
-the LVVM specified by `{model name}`.
+the LVLM specified by `{model name}`.
 `utils_eval.py`: All evaluation functions for hallucination detection, supported by **GPT-4V-Turbo**.
 `utils.py`: All other non-LVLM-related functions, including object detection, image editing, background removal, ground
 truth generation etc.
