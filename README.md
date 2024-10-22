@@ -12,10 +12,10 @@
 - [09/20/2024] 🔥 Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024](https://2024.emnlp.org/)**.
 - [07/20/2024] 🔥 We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
 - [06/15/2024] 🔥 We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
-- [02/26/2024] 🔥 Our [HallusionBench](https://arxiv.org/abs/2310.14566) is accepted by **[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.html)**.
-- [11/28/2023] 🔥 The full paper (HallusionBench) is uploaded and can be accessed [here](https://arxiv.org/abs/2310.14566). The dataset is expanded and leaderboard is updated.
-- [10/27/2023] 🔥 The [leaderboard](https://paperswithcode.com/sota/visual-question-answering-vqa-on-3) for HallusionBench and evaluation code is released! **Welcome to update your model on our leaderboard!**
-- [10/24/2023] 🔥 The early report for HallusionBench with case analysis and insights is available [here](https://arxiv.org/abs/2310.14566).
+- [02/26/2024] 🔥 Our **[HallusionBench](https://arxiv.org/abs/2310.14566)** is accepted by **[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.html)**.
+- [11/28/2023] 🔥 The full paper (HallusionBench) is uploaded and can be accessed **[here](https://arxiv.org/abs/2310.14566)**. The dataset is expanded and leaderboard is updated.
+- [10/27/2023] 🔥 The **[leaderboard](https://paperswithcode.com/sota/visual-question-answering-vqa-on-3)** for HallusionBench and evaluation code is released! **Welcome to update your model on our leaderboard!**
+- [10/24/2023] 🔥 The early report for HallusionBench with case analysis and insights is available **[here](https://arxiv.org/abs/2310.14566)**.
 
 
 If you find our paper useful, please cite our paper:
