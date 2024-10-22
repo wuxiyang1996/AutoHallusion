@@ -1,4 +1,4 @@
-# AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models [[EMNLP 2024 Findings]](https://2024.emnlp.org/)
+# AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models
 
 [Xiyang Wu*](https://wuxiyang1996.github.io/), [Tianrui Guan*](https://tianruiguan.phd), Dianqi Li, Shuaiyi Huang, Xiaoyu Liu, Xijun Wang, Ruiqi Xian, Abhinav Shrivastava, Furong Huang, Jordan Lee Boyd-Graber, Tianyi Zhou, Dinesh Manocha
 
@@ -9,7 +9,7 @@
 </p>
 
 ## Updates
-- [09/20/2024] 🔥 Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024 Findings](https://2024.emnlp.org/)**.
+- [09/20/2024] 🔥 Our **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)** is accepted by **[EMNLP 2024](https://2024.emnlp.org/)**.
 - [07/20/2024] 🔥 We launched our **[website](https://wuxiyang1996.github.io/autohallusion_page/)** for **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**.
 - [06/15/2024] 🔥 We release our early version of **[AUTOHALLUSION](https://arxiv.org/abs/2406.10900)**, as an extension of our prior work **[HallusionBench](https://arxiv.org/abs/2310.14566)**.
 - [02/26/2024] 🔥 Our [HallusionBench](https://arxiv.org/abs/2310.14566) is accepted by **[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Guan_HallusionBench_An_Advanced_Diagnostic_Suite_for_Entangled_Language_Hallucination_and_CVPR_2024_paper.html)**.
