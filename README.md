@@ -1,4 +1,4 @@
-# AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models
+# AutoHallusion: Automatic Generation of Hallucination Benchmarks for Vision-Language Models
 
 [Xiyang Wu*](https://wuxiyang1996.github.io/), [Tianrui Guan*](https://tianruiguan.phd), Dianqi Li, Shuaiyi Huang, Xiaoyu Liu, Xijun Wang, Ruiqi Xian, Abhinav Shrivastava, Furong Huang, Jordan Lee Boyd-Graber, Tianyi Zhou, Dinesh Manocha
 
