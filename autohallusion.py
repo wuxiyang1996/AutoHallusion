@@ -123,19 +123,6 @@ scene_details = {
 }
 
 
-# Generate several objects based on the scene
-target_obj = None
-
-while target_obj is None:
-    found_obj_list = list_objects_given_img_aimodel(init_img_path, list_obj_count)
-
-    if len(found_obj_list) >= list_obj_count:
-        # Choose one object for removal based on the scene
-        target_obj, target_obj_bbox = target_obj_decide(init_img_path, result_img_path,
-                                                        found_obj_list,
-                                                        processor, model, save_loc,
-                                                        max_attempt=max_attempt)
-
 if verbose:
     # Declare hallucination case information through warning messages
     print("[Input] scene constrain: " + str(scene_constrain))

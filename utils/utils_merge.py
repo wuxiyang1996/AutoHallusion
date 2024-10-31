@@ -2,10 +2,10 @@
 
 def import_functions_given_model_type(obj_think_model_type, img_caption_model_type):
     assert obj_think_model_type in ['gemini', 'claude', 'gpt4v', 'minigpt4', 'llava'], "Unsupported model type"
-    print('verbose... model_type import_functions_given_obj_think_model_type {}'.format(obj_think_model_type))
+    # print('verbose... model_type import_functions_given_obj_think_model_type {}'.format(obj_think_model_type))
 
     assert img_caption_model_type in ['gemini', 'claude', 'gpt4v', 'minigpt4', 'llava'], "Unsupported model type"
-    print('verbose... model_type import_functions_given_img_caption_model_type {}'.format(img_caption_model_type))
+    # print('verbose... model_type import_functions_given_img_caption_model_type {}'.format(img_caption_model_type))
 
     if obj_think_model_type == 'claude':
         from utils.utils_claude_clean import (
@@ -173,10 +173,10 @@ def load_cfg_given_model_type(model_type):
     temp_irrelevant_obj_thinking = temp_max
     temp_correlated_obj_thinking = temp_max
 
-    print(
-        'verbose...load_cfg_given_obj_think_model_type given model_type {}: temp_generate_noun_given_scene {}, temp_filter_remove_obj_under_scene {}, temp_filter_most_irrelevant {}, temp_random_obj_thinking {}, temp_irrelevant_obj_thinking {}, temp_correlated_obj_thinking {}'.format(
-            model_type, temp_generate_noun_given_scene, temp_filter_remove_obj_under_scene, temp_filter_most_irrelevant,
-            temp_random_obj_thinking, temp_irrelevant_obj_thinking, temp_correlated_obj_thinking))
+    # print(
+    #     'verbose...load_cfg_given_obj_think_model_type given model_type {}: temp_generate_noun_given_scene {}, temp_filter_remove_obj_under_scene {}, temp_filter_most_irrelevant {}, temp_random_obj_thinking {}, temp_irrelevant_obj_thinking {}, temp_correlated_obj_thinking {}'.format(
+    #         model_type, temp_generate_noun_given_scene, temp_filter_remove_obj_under_scene, temp_filter_most_irrelevant,
+    #         temp_random_obj_thinking, temp_irrelevant_obj_thinking, temp_correlated_obj_thinking))
 
     return (temp_generate_noun_given_scene, temp_filter_remove_obj_under_scene, temp_filter_most_irrelevant,
             temp_random_obj_thinking, temp_irrelevant_obj_thinking, temp_correlated_obj_thinking)

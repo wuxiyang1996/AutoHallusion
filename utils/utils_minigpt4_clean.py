@@ -295,7 +295,7 @@ def irrelevant_obj_thinking_minigpt4(scene_name, word_list, category, chat, temp
 
 # Given the image of the object, generate its name and describe using no more than 3 words
 def single_obj_naming_minigpt4(single_obj_img_path, chat):
-    msg = "Describe the object in this image with no more than 3 words"
+    msg = "Describe the object in this image with no more than 3 words. Do not add any comma or period."
     object_name = vqa_minigpt4(single_obj_img_path, msg, chat)
     print('single_obj_naming_minigpt4 done.')
     return object_name

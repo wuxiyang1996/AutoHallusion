@@ -344,7 +344,7 @@ def generate_image_edit(input_image_name, input_image_mask, scene_desc, out_imag
             url_parts = image_url.split('?')
             file_name = url_parts[0].split('/')[-1]
 
-            print('file_name : ', file_name)
+            # print('file_name : ', file_name)
 
             ### Download the image
             response = requests.get(image_url)
@@ -570,7 +570,9 @@ def target_obj_decide(img_path, result_img_path, obj_list, processor, model, sav
         final_img = Image.open(out_image_name)
 
         final_img.save(result_img_path)
-    return target_obj, target_obj_bbox
+        return target_obj, target_obj_bbox
+    else:
+        return None, None
 
 def vanilla_scene_img_generation(img_path, scene_name, num_obj):
     prompt = "Generate a high-quaily, realistic image of {} with at least {} distinct objects and other necessary context.".format(

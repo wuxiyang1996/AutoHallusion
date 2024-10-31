@@ -205,7 +205,7 @@ def filter_most_irrelevant_gpt4v(scene_name, word_lst, irrelevant_obj_dict_lst, 
 
 # Given the image of the object, generate its name and describe using no more than 3 words
 def single_obj_naming_gpt4v(single_obj_img_path):
-    msg = "Describe the object in this image with no more than 3 words"
+    msg = "Describe the object in this image with no more than 3 words. Do not add any comma or period."
     object_name = vqa_gpt4v(single_obj_img_path, msg)
     return object_name
 

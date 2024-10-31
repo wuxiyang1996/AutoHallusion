@@ -384,7 +384,7 @@ def irrelevant_obj_thinking_claude(scene_name, word_list, category, temperature,
 
 # Given the image of the object, generate its name and describe using no more than 3 words
 def single_obj_naming_claude(single_obj_img_path):
-    msg = "Describe the object in this image with no more than 3 words"
+    msg = "Describe the object in this image with no more than 3 words. Do not add any comma or period."
     object_name = vqa_claude(single_obj_img_path, msg)
     print('single_obj_naming_claude done.')
     return object_name
@@ -457,9 +457,9 @@ def gt_generation_multi_obj_removal_claude(init_img_path, mask_bbox, scene_name,
     ground_truth = {
         "scene": scene_name,
         "object_name": obj_name,
-        "object_description": obj_description,
+        "object_description": obj_description[:-1],
         "non_exist_target_object_name": target_obj,
-        "non_exist_target_object_description": target_obj_description
+        "non_exist_target_object_description": target_obj_description[:-1]
     }
     return ground_truth
 
