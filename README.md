@@ -2,7 +2,7 @@
 
 [Xiyang Wu*](https://wuxiyang1996.github.io/), [Tianrui Guan*](https://tianruiguan.phd), Dianqi Li, Shuaiyi Huang, Xiaoyu Liu, Xijun Wang, Ruiqi Xian, Abhinav Shrivastava, Furong Huang, Jordan Lee Boyd-Graber, Tianyi Zhou, Dinesh Manocha
 
-**[Paper](https://arxiv.org/abs/2406.10900)** | **[Twitter](https://x.com/terryguan97/status/1814757000066253120)** | **[Website](https://wuxiyang1996.github.io/autohallusion_page/)** | **[Hugging Face](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** | **[Code](https://github.com/wuxiyang1996/AutoHallusion)** | **[Dataset](https://github.com/wuxiyang1996/AutoHallusion?tab=readme-ov-file#benchmark)**
+**[Paper](https://arxiv.org/abs/2406.10900)** | **[Twitter](https://x.com/terryguan97/status/1814757000066253120)** | **[Website](https://wuxiyang1996.github.io/autohallusion_page/)** | **[Hugging Face (Coming Soon)](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** | **[Code](https://github.com/wuxiyang1996/AutoHallusion)** | **[Dataset](https://github.com/wuxiyang1996/AutoHallusion?tab=readme-ov-file#benchmark)**
 
 <p align="center" >
       <img src="./imgs/teaser.png" alt="Teaser" class="center" width="800"/>
@@ -65,7 +65,7 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 We provide a few light-weight demos to help users quickly understand the usage of different strategies provided by 
 our AutoHallusion pipeline and craft hallucination cases.
 
-### Hugging Face
+### Hugging Face (Coming Soon)
 We provide **[an interactive online Hugging Face demo](https://huggingface.co/spaces/wuxiyang/AUTOHALLUSION)** for users 
 to craft hallucination cases easily using either strategies of AutoHallusion, with synthetic images generated from text 
 or uploaded images.
