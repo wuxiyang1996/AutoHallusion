@@ -42,7 +42,7 @@ args = {
     # Reuse dataset flags
     "dataset_dir": args_cmd.dataset_dir, # Path to load the dataset
     "dataset_raw_data": "coco_val_sets", # Name of the dataset for usage
-    "dataset_obj_db": "obj_db_clean", # query file to store the objects within the dataset
+    "dataset_obj_db": "corr_obj_db_clean", # query file to store the objects within the dataset
     "dataset_scene_db": "scene_db_clean", # query file to store the scenes within the dataset
 
     # hsy 2024.05.20 
