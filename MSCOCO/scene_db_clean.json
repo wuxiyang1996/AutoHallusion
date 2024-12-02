@@ -1,0 +1,1624 @@
+{
+  "brighttidykitchen": [
+    {
+      "scene_name": "Bright, tidy kitchen.",
+      "word_list": [
+        "microwave",
+        " refrigerator",
+        " wooden cabinets",
+        " dishwasher",
+        " fruit bowl"
+      ],
+      "path": "coco_val_sets/000000037777/init.png"
+    }
+  ],
+  "simplelivingroom": [
+    {
+      "scene_name": "Simple living room.",
+      "word_list": [
+        "sofa",
+        " armchair",
+        " television",
+        " whiteboard",
+        " tv stand"
+      ],
+      "path": "coco_val_sets/000000004495/init.png"
+    }
+  ],
+  "cameraontripod": [
+    {
+      "scene_name": "Camera on tripod.",
+      "word_list": [
+        "camera",
+        " tripod",
+        " microphone",
+        " chair",
+        " vending machine"
+      ],
+      "path": "coco_val_sets/000000011813/init.png"
+    }
+  ],
+  "mirrorselfieindoors": [
+    {
+      "scene_name": "Mirror selfie indoors.",
+      "word_list": [
+        "mirror",
+        " phone",
+        " sandals",
+        " rug",
+        " baseboard heater"
+      ],
+      "path": "coco_val_sets/000000005060/init.png"
+    }
+  ],
+  "hikinghorsebackwilderness": [
+    {
+      "scene_name": "Hiking, horseback, wilderness.",
+      "word_list": [
+        "trees",
+        " rocks",
+        " horse",
+        " backpack",
+        " bandana"
+      ],
+      "path": "coco_val_sets/000000023034/init.png"
+    }
+  ],
+  "outdoordiningspread": [
+    {
+      "scene_name": "Outdoor dining spread.",
+      "word_list": [
+        "cake",
+        " wine glasses",
+        " plate",
+        " knife",
+        " tablecloth"
+      ],
+      "path": "coco_val_sets/000000002157/init.png"
+    }
+  ],
+  "historicstudyroom": [
+    {
+      "scene_name": "Historic study room.",
+      "word_list": [
+        "fireplace",
+        " chair",
+        " cabinet",
+        " desk",
+        " painting"
+      ],
+      "path": "coco_val_sets/000000016958/init.png"
+    }
+  ],
+  "vintagebathroominterior": [
+    {
+      "scene_name": "Vintage bathroom interior",
+      "word_list": [
+        "bathtub",
+        " toilet",
+        " sink",
+        " mirror",
+        " shower curtain"
+      ],
+      "path": "coco_val_sets/000000010977/init.png"
+    }
+  ],
+  "brightbathroominterior": [
+    {
+      "scene_name": "Bright bathroom interior.",
+      "word_list": [
+        "toilet",
+        " bathtub",
+        " towel",
+        " bathmat",
+        " shelves"
+      ],
+      "path": "coco_val_sets/000000032285/init.png"
+    }
+  ],
+  "childrenpettinggoat": [
+    {
+      "scene_name": "Children petting goat.",
+      "word_list": [
+        "goat",
+        " dresses",
+        " fence",
+        " grass",
+        " hair clip"
+      ],
+      "path": "coco_val_sets/000000008690/init.png"
+    }
+  ],
+  "dinermealsetup": [
+    {
+      "scene_name": "Diner meal setup.",
+      "word_list": [
+        "hamburger bun",
+        " french fries",
+        " tomato slices",
+        " pickle",
+        " glass of water"
+      ],
+      "path": "coco_val_sets/000000018575/init.png"
+    }
+  ],
+  "skateboardinginpark": [
+    {
+      "scene_name": "Skateboarding in park.",
+      "word_list": [
+        "skateboard",
+        " trash can",
+        " bench",
+        " graffiti wall",
+        " tree"
+      ],
+      "path": "coco_val_sets/000000013546/init.png"
+    }
+  ],
+  "brightlivingroom": [
+    {
+      "scene_name": "Bright living room",
+      "word_list": [
+        "sofa",
+        " table",
+        " chair",
+        " television",
+        " lamp"
+      ],
+      "path": "coco_val_sets/000000013923/init.png"
+    }
+  ],
+  "catoncar": [
+    {
+      "scene_name": "Cat on car.",
+      "word_list": [
+        "cat",
+        " car",
+        " lamp",
+        " bicycle",
+        " cabinet"
+      ],
+      "path": "coco_val_sets/000000010363/init.png"
+    }
+  ],
+  "horsesblockingroad": [
+    {
+      "scene_name": "Horses blocking road.",
+      "word_list": [
+        "car",
+        " road",
+        " fence",
+        " trees",
+        " horses"
+      ],
+      "path": "coco_val_sets/000000017178/init.png"
+    }
+  ],
+  "urbanbusstop": [
+    {
+      "scene_name": "Urban bus stop.",
+      "word_list": [
+        "buses",
+        " building",
+        " trees",
+        " street",
+        " bollards"
+      ],
+      "path": "coco_val_sets/000000015338/init.png"
+    }
+  ],
+  "baseballgameaction": [
+    {
+      "scene_name": "Baseball game action.",
+      "word_list": [
+        "baseball cap",
+        " baseball glove",
+        " baseball bat",
+        " baseball pants",
+        " baseball cleats"
+      ],
+      "path": "coco_val_sets/000000000872/init.png"
+    },
+    {
+      "scene_name": "Baseball game action.",
+      "word_list": [
+        "baseball bat",
+        " baseball",
+        " baseball glove",
+        " catchers mask",
+        " baseball helmet"
+      ],
+      "path": "coco_val_sets/000000018491/init.png"
+    }
+  ],
+  "clutteredlivingspace": [
+    {
+      "scene_name": "Cluttered living space.",
+      "word_list": [
+        "laptop",
+        " desk",
+        " bookshelf",
+        " couch",
+        " radiator"
+      ],
+      "path": "coco_val_sets/000000024610/init.png"
+    }
+  ],
+  "parisstreetscene": [
+    {
+      "scene_name": "Paris street scene.",
+      "word_list": [
+        "scooters",
+        " street lamp",
+        " caf\u00e9 awning",
+        " newspaper kiosk",
+        " bollard"
+      ],
+      "path": "coco_val_sets/000000019109/init.png"
+    }
+  ],
+  "sunnybreakfasttable": [
+    {
+      "scene_name": "Sunny breakfast table.",
+      "word_list": [
+        "wooden table",
+        " white plate",
+        " fork",
+        " knife",
+        " cup"
+      ],
+      "path": "coco_val_sets/000000017714/init.png"
+    }
+  ],
+  "urbanbusterminal": [
+    {
+      "scene_name": "Urban bus terminal",
+      "word_list": [
+        "buses",
+        " buildings",
+        " trees",
+        " streetlights",
+        " roads"
+      ],
+      "path": "coco_val_sets/000000015517/init.png"
+    }
+  ],
+  "dogcatchingfrisbee": [
+    {
+      "scene_name": "Dog catching frisbee.",
+      "word_list": [
+        "frisbee",
+        " tree",
+        " car",
+        " mulch pile",
+        " grass"
+      ],
+      "path": "coco_val_sets/000000017029/init.png"
+    }
+  ],
+  "historicclocktower": [
+    {
+      "scene_name": "Historic clock tower.",
+      "word_list": [
+        "clock tower",
+        " tiled roof",
+        " wrought iron gazebo",
+        " street lamp",
+        " trees"
+      ],
+      "path": "coco_val_sets/000000028285/init.png"
+    }
+  ],
+  "personsleepingoutdoors": [
+    {
+      "scene_name": "Person sleeping outdoors.",
+      "word_list": [
+        "bench",
+        " sleeping bag",
+        " backpack",
+        " parking meter",
+        " grass"
+      ],
+      "path": "coco_val_sets/000000030828/init.png"
+    }
+  ],
+  "compactkitcheninterior": [
+    {
+      "scene_name": "Compact kitchen interior",
+      "word_list": [
+        "refrigerator",
+        " stove",
+        " microwave",
+        " wooden cabinets",
+        " tile floor"
+      ],
+      "path": "coco_val_sets/000000000802/init.png"
+    }
+  ],
+  "modernbathroominterior": [
+    {
+      "scene_name": "Modern bathroom interior",
+      "word_list": [
+        "bathtub",
+        " shower",
+        " bathroom mirror",
+        " bathroom sink",
+        " bathmat"
+      ],
+      "path": "coco_val_sets/000000006213/init.png"
+    }
+  ],
+  "outdoorhotdogserving": [
+    {
+      "scene_name": "Outdoor hotdog serving",
+      "word_list": [
+        "tray",
+        " hot dogs",
+        " buns",
+        " hat",
+        " shirt"
+      ],
+      "path": "coco_val_sets/000000024567/init.png"
+    }
+  ],
+  "elegantdinnersetting": [
+    {
+      "scene_name": "Elegant dinner setting.",
+      "word_list": [
+        "wine glasses",
+        " flower vase",
+        " flowers",
+        " tablecloth",
+        " napkins"
+      ],
+      "path": "coco_val_sets/000000007818/init.png"
+    }
+  ],
+  "motorcyclebicyclesoutdoor": [
+    {
+      "scene_name": "Motorcycle, bicycles, outdoor.",
+      "word_list": [
+        "motorcycle",
+        " bicycles",
+        " basket",
+        " fence",
+        " sneakers"
+      ],
+      "path": "coco_val_sets/000000011149/init.png"
+    }
+  ],
+  "workersrelaxingroadside": [
+    {
+      "scene_name": "Workers relaxing roadside.",
+      "word_list": [
+        "scooters",
+        " wall mural",
+        " folding chair",
+        " broom",
+        " dustpan"
+      ],
+      "path": "coco_val_sets/000000008211/init.png"
+    }
+  ],
+  "planesoverbridge": [
+    {
+      "scene_name": "Planes over bridge.",
+      "word_list": [
+        "airplanes",
+        " bridge",
+        " clouds",
+        " building",
+        " opera house"
+      ],
+      "path": "coco_val_sets/000000001761/init.png"
+    }
+  ],
+  "catcomputerdesk": [
+    {
+      "scene_name": "Cat, computer, desk.",
+      "word_list": [
+        "cat",
+        " computer monitor",
+        " keyboard",
+        " telephone",
+        " laptop"
+      ],
+      "path": "coco_val_sets/000000004795/init.png"
+    }
+  ],
+  "tropicalbedroominterior": [
+    {
+      "scene_name": "Tropical bedroom interior.",
+      "word_list": [
+        "bed",
+        " mosquito net",
+        " nightstand",
+        " table",
+        " chair"
+      ],
+      "path": "coco_val_sets/000000010092/init.png"
+    }
+  ],
+  "homeofficesetup": [
+    {
+      "scene_name": "Home office setup.",
+      "word_list": [
+        "laptop",
+        " chair",
+        " desk",
+        " headphones",
+        " trash can"
+      ],
+      "path": "coco_val_sets/000000027620/init.png"
+    }
+  ],
+  "urbanstreetintersection": [
+    {
+      "scene_name": "Urban street intersection.",
+      "word_list": [
+        "street light pole",
+        " traffic light",
+        " cars",
+        " buildings",
+        " road"
+      ],
+      "path": "coco_val_sets/000000032941/init.png"
+    },
+    {
+      "scene_name": "Urban street intersection.",
+      "word_list": [
+        "street clock",
+        " traffic lights",
+        " cars",
+        " metal railing",
+        " pedestrian crossing signal"
+      ],
+      "path": "coco_val_sets/000000175438/init.png"
+    }
+  ],
+  "tennismatchongoing": [
+    {
+      "scene_name": "Tennis match ongoing.",
+      "word_list": [
+        "tennis racket",
+        " tennis ball",
+        " tennis court",
+        " chair",
+        " cap"
+      ],
+      "path": "coco_val_sets/000000005586/init.png"
+    }
+  ],
+  "clutteredcozyinterior": [
+    {
+      "scene_name": "Cluttered, cozy interior.",
+      "word_list": [
+        "refrigerator",
+        " desk",
+        " balloon",
+        " rug",
+        " television"
+      ],
+      "path": "coco_val_sets/000000014038/init.png"
+    }
+  ],
+  "horsetrainingsession": [
+    {
+      "scene_name": "Horse training session.",
+      "word_list": [
+        "horse",
+        " door",
+        " wheelbarrow",
+        " shovel",
+        " bucket"
+      ],
+      "path": "coco_val_sets/000000015956/init.png"
+    }
+  ],
+  "rainydayjoy": [
+    {
+      "scene_name": "Rainy day joy",
+      "word_list": [
+        "umbrella",
+        " red jacket",
+        " bush",
+        " car",
+        " house"
+      ],
+      "path": "coco_val_sets/000000007088/init.png"
+    }
+  ],
+  "cozyofficecorner": [
+    {
+      "scene_name": "Cozy office corner",
+      "word_list": [
+        "desk",
+        " chair",
+        " table lamp",
+        " computer monitor",
+        " potted plant"
+      ],
+      "path": "coco_val_sets/000000037740/init.png"
+    }
+  ],
+  "luxuriousbathroomselfie": [
+    {
+      "scene_name": "Luxurious bathroom selfie",
+      "word_list": [
+        "mirror",
+        " television",
+        " towel",
+        " sink",
+        " faucet"
+      ],
+      "path": "coco_val_sets/000000009772/init.png"
+    }
+  ],
+  "skateboardingdynamictrick": [
+    {
+      "scene_name": "Skateboarding dynamic trick.",
+      "word_list": [
+        "skateboard",
+        " fence",
+        " grass",
+        " trees",
+        " concrete ramp"
+      ],
+      "path": "coco_val_sets/000000013201/init.png"
+    }
+  ],
+  "cozylivingroom": [
+    {
+      "scene_name": "Cozy living room",
+      "word_list": [
+        "sofa",
+        " round table",
+        " table lamp",
+        " area rug",
+        " curtains"
+      ],
+      "path": "coco_val_sets/000000031735/init.png"
+    },
+    {
+      "scene_name": "Cozy living room.",
+      "word_list": [
+        "sofa",
+        " coffee table",
+        " lamp",
+        " blanket",
+        " plant pot"
+      ],
+      "path": "coco_val_sets/000000106235/init.png"
+    }
+  ],
+  "fishingboatsmarshland": [
+    {
+      "scene_name": "Fishing boats, marshland.",
+      "word_list": [
+        "fishing boats",
+        " dock",
+        " grass",
+        " birds",
+        " clouds"
+      ],
+      "path": "coco_val_sets/000000002923/init.png"
+    }
+  ],
+  "bakingholidaycookies": [
+    {
+      "scene_name": "Baking holiday cookies",
+      "word_list": [
+        "table",
+        " cookies",
+        " apron",
+        " pie",
+        " glass cups"
+      ],
+      "path": "coco_val_sets/000000017899/init.png"
+    }
+  ],
+  "colorfuldomesticinterior": [
+    {
+      "scene_name": "Colorful domestic interior.",
+      "word_list": [
+        "tv",
+        " dining table",
+        " vase",
+        " rug",
+        " wall clock"
+      ],
+      "path": "coco_val_sets/000000000139/init.png"
+    }
+  ],
+  "vintagetransportationdisplay": [
+    {
+      "scene_name": "Vintage transportation display.",
+      "word_list": [
+        "vintage car",
+        " motorcycles",
+        " bus",
+        " street lamp",
+        " cobblestone pavement"
+      ],
+      "path": "coco_val_sets/000000033854/init.png"
+    }
+  ],
+  "urbantrafficscene": [
+    {
+      "scene_name": "Urban traffic scene.",
+      "word_list": [
+        "bus",
+        " car",
+        " street sign",
+        " building",
+        " tree"
+      ],
+      "path": "coco_val_sets/000000026204/init.png"
+    }
+  ],
+  "airportparkingunloading": [
+    {
+      "scene_name": "Airport parking unloading.",
+      "word_list": [
+        "car",
+        " luggage cart",
+        " suitcase",
+        " backpack",
+        " overhead sign"
+      ],
+      "path": "coco_val_sets/000000009891/init.png"
+    }
+  ],
+  "cozyworkspacesetup": [
+    {
+      "scene_name": "Cozy workspace setup.",
+      "word_list": [
+        "laptop",
+        " lamp",
+        " telephone",
+        " glass",
+        " candelabrastyle lamp"
+      ],
+      "path": "coco_val_sets/000000016439/init.png"
+    }
+  ],
+  "beachsurfboardsumbrellas": [
+    {
+      "scene_name": "Beach, surfboards, umbrellas.",
+      "word_list": [
+        "beach umbrella",
+        " beach chairs",
+        " surfboard",
+        " towel",
+        " bag"
+      ],
+      "path": "coco_val_sets/000000016451/init.png"
+    }
+  ],
+  "desertmemorialsite": [
+    {
+      "scene_name": "Desert memorial site.",
+      "word_list": [
+        "stuffed toys",
+        " wooden cross",
+        " beer bottles",
+        " quilt",
+        " wooden table"
+      ],
+      "path": "coco_val_sets/000000020553/init.png"
+    }
+  ],
+  "elegantlivingroom": [
+    {
+      "scene_name": "Elegant living room.",
+      "word_list": [
+        "armchair",
+        " table lamps",
+        " fireplace",
+        " bookshelves",
+        " framed picture"
+      ],
+      "path": "coco_val_sets/000000031248/init.png"
+    },
+    {
+      "scene_name": "Elegant living room",
+      "word_list": [
+        "sofa",
+        " coffee table",
+        " cushion",
+        " cabinet",
+        " rug"
+      ],
+      "path": "coco_val_sets/000000089045/init.png"
+    }
+  ],
+  "holidaycitysquare": [
+    {
+      "scene_name": "Holiday city square",
+      "word_list": [
+        "clock tower",
+        " christmas tree",
+        " street lights",
+        " buildings",
+        " hanging lights"
+      ],
+      "path": "coco_val_sets/000000031118/init.png"
+    }
+  ],
+  "manrepairingwheel": [
+    {
+      "scene_name": "Man repairing wheel.",
+      "word_list": [
+        "motorcycle",
+        " bicycle",
+        " wheel hub",
+        " tool",
+        " sandals"
+      ],
+      "path": "coco_val_sets/000000013177/init.png"
+    }
+  ],
+  "beachhorseracing": [
+    {
+      "scene_name": "Beach horse racing.",
+      "word_list": [
+        "horses",
+        " beach",
+        " ocean",
+        " sand",
+        " sky"
+      ],
+      "path": "coco_val_sets/000000007281/init.png"
+    }
+  ],
+  "cozybedroominterior": [
+    {
+      "scene_name": "Cozy bedroom interior.",
+      "word_list": [
+        "bed",
+        " bookshelf",
+        " mirror",
+        " dresser",
+        " window"
+      ],
+      "path": "coco_val_sets/000000000632/init.png"
+    },
+    {
+      "scene_name": "Cozy bedroom interior.",
+      "word_list": [
+        "bed",
+        " chair",
+        " fireplace",
+        " clock",
+        " television"
+      ],
+      "path": "coco_val_sets/000000041872/init.png"
+    }
+  ],
+  "clutteredurbanapartment": [
+    {
+      "scene_name": "Cluttered urban apartment.",
+      "word_list": [
+        "bed",
+        " chair",
+        " mirror",
+        " lamp",
+        " door"
+      ],
+      "path": "coco_val_sets/000000039956/init.png"
+    }
+  ],
+  "youthbaseballgame": [
+    {
+      "scene_name": "Youth baseball game.",
+      "word_list": [
+        "baseball bat",
+        " baseball",
+        " baseball glove",
+        " helmet",
+        " chainlink fence"
+      ],
+      "path": "coco_val_sets/000000054593/init.png"
+    }
+  ],
+  "vintagetrainkitchen": [
+    {
+      "scene_name": "Vintage train kitchen.",
+      "word_list": [
+        "stove",
+        " sink",
+        " cupboard",
+        " table",
+        " fire extinguisher"
+      ],
+      "path": "coco_val_sets/000000056127/init.png"
+    }
+  ],
+  "hotelroominterior": [
+    {
+      "scene_name": "Hotel room interior.",
+      "word_list": [
+        "bed",
+        " suitcase",
+        " lamp",
+        " armchair",
+        " curtains"
+      ],
+      "path": "coco_val_sets/000000051738/init.png"
+    }
+  ],
+  "minimalisthotelroom": [
+    {
+      "scene_name": "Minimalist hotel room",
+      "word_list": [
+        "beds",
+        " pillows",
+        " table",
+        " chair",
+        " suitcase"
+      ],
+      "path": "coco_val_sets/000000050828/init.png"
+    }
+  ],
+  "halloweenpumpkindisplay": [
+    {
+      "scene_name": "Halloween pumpkin display.",
+      "word_list": [
+        "carved pumpkins",
+        " pink flowers",
+        " figurine",
+        " pikachu design on pumpkin",
+        " drawings"
+      ],
+      "path": "coco_val_sets/000000051326/init.png"
+    }
+  ],
+  "kidsonluggage": [
+    {
+      "scene_name": "Kids on luggage.",
+      "word_list": [
+        "car",
+        " luggage cart",
+        " suitcase",
+        " rearview mirror",
+        " road sign"
+      ],
+      "path": "coco_val_sets/000000055150/init.png"
+    }
+  ],
+  "cafedesserttable": [
+    {
+      "scene_name": "Cafe dessert table",
+      "word_list": [
+        "milkshake glass",
+        " whipped cream",
+        " cake",
+        " fork",
+        " napkin"
+      ],
+      "path": "coco_val_sets/000000054605/init.png"
+    }
+  ],
+  "traincrossingroad": [
+    {
+      "scene_name": "Train crossing road.",
+      "word_list": [
+        "train",
+        " car",
+        " traffic light",
+        " school bus",
+        " railroad crossing sign"
+      ],
+      "path": "coco_val_sets/000000057149/init.png"
+    }
+  ],
+  "vintagekitcheninterior": [
+    {
+      "scene_name": "Vintage kitchen interior.",
+      "word_list": [
+        "refrigerator",
+        " stove",
+        " ceiling fan",
+        " window",
+        " dishwasher"
+      ],
+      "path": "coco_val_sets/000000040471/init.png"
+    }
+  ],
+  "manwithdonkey": [
+    {
+      "scene_name": "Man with donkey",
+      "word_list": [
+        "mule",
+        " saddlebags",
+        " basket",
+        " jacket",
+        " scarf"
+      ],
+      "path": "coco_val_sets/000000047819/init.png"
+    }
+  ],
+  "colorfulurbanstreet": [
+    {
+      "scene_name": "Colorful urban street",
+      "word_list": [
+        "billboard",
+        " cars",
+        " street lamps",
+        " buildings",
+        " street signs"
+      ],
+      "path": "coco_val_sets/000000039484/init.png"
+    }
+  ],
+  "cozylivingspace": [
+    {
+      "scene_name": "Cozy living space",
+      "word_list": [
+        "television",
+        " sofa",
+        " potted plants",
+        " rug",
+        " curtains"
+      ],
+      "path": "coco_val_sets/000000039477/init.png"
+    }
+  ],
+  "childplayingindoors": [
+    {
+      "scene_name": "Child playing indoors.",
+      "word_list": [
+        "bed",
+        " nightstand",
+        " lamp",
+        " ironing board",
+        " toy box"
+      ],
+      "path": "coco_val_sets/000000046048/init.png"
+    }
+  ],
+  "snowytrainjourney": [
+    {
+      "scene_name": "Snowy train journey.",
+      "word_list": [
+        "train",
+        " railway tracks",
+        " trees",
+        " snow",
+        " telegraph poles"
+      ],
+      "path": "coco_val_sets/000000042563/init.png"
+    }
+  ],
+  "italianrestaurantdining": [
+    {
+      "scene_name": "Italian restaurant dining.",
+      "word_list": [
+        "pizza",
+        " beer glass",
+        " wine glass",
+        " white plate",
+        " restaurant table"
+      ],
+      "path": "coco_val_sets/000000047112/init.png"
+    }
+  ],
+  "businvillage": [
+    {
+      "scene_name": "Bus in village",
+      "word_list": [
+        "bus",
+        " truck",
+        " streetlight",
+        " trash bin",
+        " building"
+      ],
+      "path": "coco_val_sets/000000055167/init.png"
+    }
+  ],
+  "foggyurbanstreet": [
+    {
+      "scene_name": "Foggy urban street.",
+      "word_list": [
+        "traffic light",
+        " cars",
+        " street signs",
+        " buildings",
+        " bus"
+      ],
+      "path": "coco_val_sets/000000054967/init.png"
+    }
+  ],
+  "pizzawinestreetview": [
+    {
+      "scene_name": "Pizza, wine, street-view.",
+      "word_list": [
+        "wine glasses",
+        " pizza",
+        " sauce bowls",
+        " table",
+        " napkin"
+      ],
+      "path": "coco_val_sets/000000099039/init.png"
+    }
+  ],
+  "urbanstreetcorner": [
+    {
+      "scene_name": "Urban street corner.",
+      "word_list": [
+        "street light pole",
+        " fire hydrant",
+        " traffic light",
+        " street sign",
+        " pickup truck"
+      ],
+      "path": "coco_val_sets/000000088432/init.png"
+    }
+  ],
+  "urbanstreetdining": [
+    {
+      "scene_name": "Urban street dining",
+      "word_list": [
+        "street lamp",
+        " car",
+        " table",
+        " chair",
+        " traffic sign"
+      ],
+      "path": "coco_val_sets/000000067616/init.png"
+    }
+  ],
+  "videogameplaying": [
+    {
+      "scene_name": "Video game playing.",
+      "word_list": [
+        "kitchen cabinets",
+        " folding chair",
+        " gaming console controller",
+        " water bottle",
+        " tabletop"
+      ],
+      "path": "coco_val_sets/000000091500/init.png"
+    }
+  ],
+  "beerandpizza": [
+    {
+      "scene_name": "Beer and pizza.",
+      "word_list": [
+        "glasses of beer",
+        " flatbread pizzas",
+        " wooden serving tray",
+        " paper napkin",
+        " table"
+      ],
+      "path": "coco_val_sets/000000074733/init.png"
+    }
+  ],
+  "modernkitcheninterior": [
+    {
+      "scene_name": "Modern kitchen interior",
+      "word_list": [
+        "sink",
+        " microwave",
+        " stove",
+        " dishwasher",
+        " refrigerator"
+      ],
+      "path": "coco_val_sets/000000091615/init.png"
+    },
+    {
+      "scene_name": "Modern kitchen interior.",
+      "word_list": [
+        "microwave",
+        " stove",
+        " dishwasher",
+        " kitchen sink",
+        " refrigerator"
+      ],
+      "path": "coco_val_sets/000000097022/init.png"
+    },
+    {
+      "scene_name": "Modern kitchen interior.",
+      "word_list": [
+        "bar stools",
+        " basket",
+        " clock",
+        " sink",
+        " pendant lights"
+      ],
+      "path": "coco_val_sets/000000074209/init.png"
+    },
+    {
+      "scene_name": "Modern kitchen interior",
+      "word_list": [
+        "stove",
+        " refrigerator",
+        " kettle",
+        " toaster",
+        " kitchen sink"
+      ],
+      "path": "coco_val_sets/000000175364/init.png"
+    }
+  ],
+  "breakfastandmagazine": [
+    {
+      "scene_name": "Breakfast and magazine",
+      "word_list": [
+        "plate",
+        " magazine",
+        " coffee cup",
+        " notebook",
+        " pen"
+      ],
+      "path": "coco_val_sets/000000066706/init.png"
+    }
+  ],
+  "friendlykitchengathering": [
+    {
+      "scene_name": "Friendly kitchen gathering.",
+      "word_list": [
+        "pots",
+        " bowl",
+        " spinach",
+        " towel",
+        " ladle"
+      ],
+      "path": "coco_val_sets/000000084241/init.png"
+    }
+  ],
+  "giraffeseatingpeacefully": [
+    {
+      "scene_name": "Giraffes eating peacefully.",
+      "word_list": [
+        "giraffes",
+        " trees",
+        " rocks",
+        " fence",
+        " mountain"
+      ],
+      "path": "coco_val_sets/000000101780/init.png"
+    }
+  ],
+  "cakedecoratingsetup": [
+    {
+      "scene_name": "Cake decorating setup.",
+      "word_list": [
+        "cake",
+        " french toast",
+        " aluminum foil",
+        " glass bowl",
+        " serving knife"
+      ],
+      "path": "coco_val_sets/000000095707/init.png"
+    }
+  ],
+  "teddybearshop": [
+    {
+      "scene_name": "Teddy bear shop.",
+      "word_list": [
+        "teddy bear",
+        " signboard",
+        " window",
+        " door",
+        " stuffed animals"
+      ],
+      "path": "coco_val_sets/000000094185/init.png"
+    }
+  ],
+  "childeatingpizza": [
+    {
+      "scene_name": "Child eating pizza",
+      "word_list": [
+        "pizza slice",
+        " plate",
+        " fork",
+        " glass",
+        " wooden table"
+      ],
+      "path": "coco_val_sets/000000080932/init.png"
+    }
+  ],
+  "cozyindoorplaytime": [
+    {
+      "scene_name": "Cozy indoor playtime",
+      "word_list": [
+        "teddy bear",
+        " television",
+        " red sofa",
+        " wooden chair",
+        " coffee table"
+      ],
+      "path": "coco_val_sets/000000092091/init.png"
+    }
+  ],
+  "outdoormotorcycleevent": [
+    {
+      "scene_name": "Outdoor motorcycle event.",
+      "word_list": [
+        "motorcycle",
+        " banner",
+        " tree",
+        " helmet",
+        " sunglasses"
+      ],
+      "path": "coco_val_sets/000000078748/init.png"
+    }
+  ],
+  "catondesk": [
+    {
+      "scene_name": "Cat on desk.",
+      "word_list": [
+        "cat",
+        " telephone",
+        " pen",
+        " notebook",
+        " table"
+      ],
+      "path": "coco_val_sets/000000078426/init.png"
+    }
+  ],
+  "parkinglotevening": [
+    {
+      "scene_name": "Parking lot evening.",
+      "word_list": [
+        "motorcycle",
+        " parking meter",
+        " car",
+        " trash can",
+        " tree"
+      ],
+      "path": "coco_val_sets/000000085376/init.png"
+    }
+  ],
+  "airplanemealsetup": [
+    {
+      "scene_name": "Airplane meal setup.",
+      "word_list": [
+        "bowl of salad",
+        " cup of soup",
+        " glass of wine",
+        " bread roll",
+        " butter packet"
+      ],
+      "path": "coco_val_sets/000000070048/init.png"
+    }
+  ],
+  "cozyvintagekitchen": [
+    {
+      "scene_name": "Cozy vintage kitchen.",
+      "word_list": [
+        "refrigerator",
+        " microwave",
+        " bar stool",
+        " pendant light",
+        " kitchen cabinets"
+      ],
+      "path": "coco_val_sets/000000068833/init.png"
+    }
+  ],
+  "trainstationworking": [
+    {
+      "scene_name": "Train station working",
+      "word_list": [
+        "train",
+        " bicycle",
+        " laptop",
+        " picnic table",
+        " advertisement board"
+      ],
+      "path": "coco_val_sets/000000076547/init.png"
+    }
+  ],
+  "motorcyclebeachpeople": [
+    {
+      "scene_name": "Motorcycle, beach, people.",
+      "word_list": [
+        "motorcycle",
+        " helmet",
+        " signboard",
+        " rock",
+        " tree"
+      ],
+      "path": "coco_val_sets/000000102411/init.png"
+    }
+  ],
+  "deepdishpizzadining": [
+    {
+      "scene_name": "Deep-dish pizza dining.",
+      "word_list": [
+        "pizza",
+        " knife",
+        " plate",
+        " glass of water",
+        " glass of wine"
+      ],
+      "path": "coco_val_sets/000000172571/init.png"
+    }
+  ],
+  "pizzadinnersetup": [
+    {
+      "scene_name": "Pizza dinner setup.",
+      "word_list": [
+        "ketchup bottle",
+        " plate",
+        " fork",
+        " glass",
+        " pizza slice"
+      ],
+      "path": "coco_val_sets/000000173004/init.png"
+    }
+  ],
+  "luxuriousbathroominterior": [
+    {
+      "scene_name": "Luxurious bathroom interior.",
+      "word_list": [
+        "mirror",
+        " sink",
+        " shower enclosure",
+        " toilet",
+        " towel"
+      ],
+      "path": "coco_val_sets/000000111951/init.png"
+    }
+  ],
+  "pizzabeertoast": [
+    {
+      "scene_name": "Pizza, beer, toast.",
+      "word_list": [
+        "bottle of beer",
+        " glass",
+        " plates of food",
+        " salt shaker",
+        " oregano shaker"
+      ],
+      "path": "coco_val_sets/000000108253/init.png"
+    }
+  ],
+  "colorfultiledbathroom": [
+    {
+      "scene_name": "Colorful tiled bathroom",
+      "word_list": [
+        "sink",
+        " mirror",
+        " towel dispenser",
+        " door",
+        " wall tiles"
+      ],
+      "path": "coco_val_sets/000000104572/init.png"
+    }
+  ],
+  "artistslivingroom": [
+    {
+      "scene_name": "Artist's living room.",
+      "word_list": [
+        "bookshelf",
+        " guitar",
+        " floor lamp",
+        " easel",
+        " television"
+      ],
+      "path": "coco_val_sets/000000104666/init.png"
+    }
+  ],
+  "dinerkitcheninterior": [
+    {
+      "scene_name": "Diner kitchen interior.",
+      "word_list": [
+        "bar stools",
+        " kitchen hood",
+        " dining table",
+        " ceiling light",
+        " menu stand"
+      ],
+      "path": "coco_val_sets/000000173302/init.png"
+    }
+  ],
+  "catwatcheslaptop": [
+    {
+      "scene_name": "Cat watches laptop.",
+      "word_list": [
+        "laptop",
+        " cat",
+        " blanket",
+        " pen",
+        " pillow"
+      ],
+      "path": "coco_val_sets/000000115885/init.png"
+    }
+  ],
+  "lunchtimemealoutdoors": [
+    {
+      "scene_name": "Lunchtime meal outdoors.",
+      "word_list": [
+        "sandwich",
+        " coleslaw",
+        " glass",
+        " salt shaker",
+        " smartphone"
+      ],
+      "path": "coco_val_sets/000000120853/init.png"
+    }
+  ],
+  "catinchair": [
+    {
+      "scene_name": "Cat in chair.",
+      "word_list": [
+        "orange chair",
+        " wooden desk",
+        " brown chest of drawers",
+        " floor lamp",
+        " wicker basket"
+      ],
+      "path": "coco_val_sets/000000106389/init.png"
+    }
+  ],
+  "horsedrawntramride": [
+    {
+      "scene_name": "Horse-drawn tram ride.",
+      "word_list": [
+        "horse",
+        " tram",
+        " bridge",
+        " railway tracks",
+        " ocean"
+      ],
+      "path": "coco_val_sets/000000166747/init.png"
+    }
+  ],
+  "pizzamealshared": [
+    {
+      "scene_name": "Pizza meal shared.",
+      "word_list": [
+        "pizza",
+        " plate",
+        " fork",
+        " glass",
+        " salad"
+      ],
+      "path": "coco_val_sets/000000173371/init.png"
+    }
+  ],
+  "relaxedindoorgathering": [
+    {
+      "scene_name": "Relaxed indoor gathering.",
+      "word_list": [
+        "sofa",
+        " coffee table",
+        " plant",
+        " book",
+        " curtains"
+      ],
+      "path": "coco_val_sets/000000115870/init.png"
+    }
+  ],
+  "nighttimeurbanbus": [
+    {
+      "scene_name": "Nighttime urban bus.",
+      "word_list": [
+        "bus",
+        " tree",
+        " streetlight",
+        " sidewalk",
+        " storefront"
+      ],
+      "path": "coco_val_sets/000000176037/init.png"
+    }
+  ],
+  "outdoordiningsetup": [
+    {
+      "scene_name": "Outdoor dining setup",
+      "word_list": [
+        "bottles",
+        " glass jar",
+        " plate",
+        " wooden table",
+        " bench"
+      ],
+      "path": "coco_val_sets/000000170670/init.png"
+    }
+  ],
+  "tropicalbeachrelaxation": [
+    {
+      "scene_name": "Tropical beach relaxation.",
+      "word_list": [
+        "wooden bench",
+        " coconuts",
+        " bananas",
+        " hammock",
+        " palm trees"
+      ],
+      "path": "coco_val_sets/000000112378/init.png"
+    }
+  ],
+  "busonroad": [
+    {
+      "scene_name": "Bus on road.",
+      "word_list": [
+        "bus",
+        " road",
+        " pedestrian crossing",
+        " traffic sign",
+        " planter box"
+      ],
+      "path": "coco_val_sets/000000179265/init.png"
+    }
+  ],
+  "oldrustickitchen": [
+    {
+      "scene_name": "Old, rustic kitchen.",
+      "word_list": [
+        "old refrigerator",
+        " white refrigerator",
+        " window",
+        " chair",
+        " door"
+      ],
+      "path": "coco_val_sets/000000168593/init.png"
+    }
+  ],
+  "catnappingonlaptop": [
+    {
+      "scene_name": "Cat napping on laptop.",
+      "word_list": [
+        "laptop",
+        " cat",
+        " dvd player",
+        " mobile phone",
+        " wooden desk"
+      ],
+      "path": "coco_val_sets/000000119233/init.png"
+    }
+  ],
+  "messyofficeworkspace": [
+    {
+      "scene_name": "Messy office workspace.",
+      "word_list": [
+        "office chair",
+        " laptop",
+        " monitor",
+        " desk",
+        " backpack"
+      ],
+      "path": "coco_val_sets/000000172595/init.png"
+    }
+  ],
+  "eclecticlivingroom": [
+    {
+      "scene_name": "Eclectic living room.",
+      "word_list": [
+        "sofa",
+        " table lamp",
+        " wooden shelf",
+        " framed pictures",
+        " desk"
+      ],
+      "path": "coco_val_sets/000000171740/init.png"
+    }
+  ],
+  "travelersrestingarea": [
+    {
+      "scene_name": "Travelers' resting area.",
+      "word_list": [
+        "suitcase",
+        " backpack",
+        " jacket",
+        " table",
+        " chair"
+      ],
+      "path": "coco_val_sets/000000115245/init.png"
+    }
+  ],
+  "elegantdinnergathering": [
+    {
+      "scene_name": "Elegant dinner gathering.",
+      "word_list": [
+        "wine glasses",
+        " water pitcher",
+        " dinner plates",
+        " candles",
+        " menus"
+      ],
+      "path": "coco_val_sets/000000166918/init.png"
+    }
+  ]
+}
