@@ -61,7 +61,7 @@ To keep evaluation simple, we only provide the question in form of yes/no questi
 |-------------|:------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------:|
 | Oct 3, 2024 | [autohallusion_data.json](https://drive.google.com/file/d/17yrpbLrtd4MmqNFE1ET5qxksea7i5u-x/view?usp=drive_link) | [image.zip](https://drive.google.com/file/d/1HsbIPw8wslRpBswSZygp6YhBMqUHvfVW/view?usp=drive_link) |     3129     |
 
-**Note:** We provide our version of the MSCOCO validation dataset with object segmentation results provided to verify our code for real-world datasets. The link to the dataset is provided [here](https://drive.google.com/file/d/1SDjq55CdFmA0BsotBjLATz4ZPt3pPam7/view?usp=sharing).
+**Note:** We provide our version of the MSCOCO validation dataset with object segmentation results provided to verify our code for real-world datasets. The link to the dataset is provided [here](https://drive.google.com/file/d/1SDjq55CdFmA0BsotBjLATz4ZPt3pPam7/view?usp=sharing). The JSON files and instructions are provided [here](https://github.com/wuxiyang1996/AutoHallusion/tree/master/MSCOCO).
 
 ## Demo
 We provide a few light-weight demos to help users quickly understand the usage of different strategies provided by 
